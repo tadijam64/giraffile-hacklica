@@ -93,6 +93,26 @@ namespace Girafile.Controllers.API
 
             return StatusCode(HttpStatusCode.NoContent);
         }
+        /*
+        public bool PostDocument(DocumentDTO document)
+        {
+            Document temp = db.Document.Find(document.ID);
+
+            if(temp != null)
+            {
+                temp.Keywords = document.Keywords;
+                temp.MetaData = document.Metadata;
+                temp.IDLanguge = (db.Language.Where(l => l.Name.Contains(document.Language)).FirstOrDefault().ID);
+
+                db.Entry(temp).State = EntityState.Modified;
+                db.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }*/
 
         // POST: api/Documents
         [ResponseType(typeof(Document))]

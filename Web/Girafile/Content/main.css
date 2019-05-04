@@ -1,0 +1,182 @@
+﻿body {
+    background: #eceff1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin-top: 8%;
+    box-sizing: border-box;
+}
+.row {
+    width: 500px;
+    position: relative;
+    left: 50%;
+    margin-left: -250px;
+    margin-bottom: -40px;
+}
+
+
+.logo {
+    width: 250px;    
+    float:left;
+    margin-left:-75px;
+}
+
+    .logo img {
+        width: 250px;
+    }
+
+.baloni {
+    position: relative;
+    width: 325px;
+    height: 250px;
+    float: left;
+    overflow-y: scroll;
+}
+
+    .baloni .item {
+        width: 80%;
+        position: relative;
+        padding: 10px;
+        -webkit-border-radius: 15px;
+        border-radius: 15px;
+        margin-top:10px;
+    }
+
+    .baloni .zirafa {
+        background: #2196F3;
+        color: #FFF;
+    }
+
+    .baloni .user {
+        background: #E0E0E0;
+        color: #222;
+        margin-left:75px;
+    }
+    .baloni .success {
+        background: #4CAF50;
+        color: #FFF;
+    }
+
+.form {
+    width: 500px;
+    height: 50px;
+    position: relative;
+    left: 50%;
+    margin-left: -250px;
+    margin-top:0;
+}
+
+    .form input {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        -webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+        padding: 20px;
+        box-sizing: border-box;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        font-size: 1.1em;
+        color: #333;
+    }
+
+.lastFive {
+    width: 675px;
+    position: relative;
+    left: 50%;
+    margin-left: -337.5px;
+    margin-top: 4%;
+}
+
+    .lastFive .item {
+        width: 95px;
+        text-align: center;
+        float: left;
+        margin-left: 50px;
+    }
+
+    .lastFive:first-child, .lastFive .first {
+        margin-left: 0px;
+    }
+
+    .lastFive .item .box {
+        width: 95px;
+        padding: 10px;
+        padding-top: 35px;
+        padding-bottom: 0;
+        background: rgba(230, 150, 65,1);
+        text-align: center;
+        -webkit-border-radius: 5000px;
+        border-radius: 5000px;
+    }
+
+    .lastFive .item .text {
+        width: 95px;
+        padding-left: 8px;
+        text-align: center;
+    }
+
+    .lastFive .item img {
+        width: 75px;
+        margin-left: -5px;
+    }
+
+    .lastFive .title {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+        color: #b87834;
+    }
+
+#dropArea {
+    width: 70%;
+    height: 70%;
+    margin-top: -5%;
+    background: rgba(255,255,255,0.75);
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    margin-left: -35%;
+    display: none;
+}
+
+    #dropArea .innerBorder {
+        width: 96.5%;
+        height: 94%;
+        position: relative;
+        left: 1.4%;
+        top: 3%;
+        border: 3px dashed rgba(34,34,34, 0.5);
+    }
+
+        #dropArea .innerBorder .icon {
+            position: relative;
+            width: 120px;
+            left: 50%;
+            margin-left: -60px;
+            margin-top: 15%;
+            opacity: 0.5;
+        }
+
+        #dropArea .innerBorder .text {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2.6em;
+            color: #555;
+            font-weight: bold;
+        }
+
+        #dropArea .innerBorder .icon img {
+            width: 120px;
+        }
+
+#forma {
+    display: none;
+}
+
+
+.clearfix:after, .row:after, .logo:after, .baloni:after {
+    content: "";
+    clear: both;
+    display: table;
+}
