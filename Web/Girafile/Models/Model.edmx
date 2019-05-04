@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Action">
           <Key>
             <PropertyRef Name="ID" />
@@ -22,6 +22,7 @@
           <Property Name="MetaData" Type="text" />
           <Property Name="Keywords" Type="text" />
           <Property Name="MD5" Type="nvarchar" MaxLength="255" />
+          <Property Name="Deleted" Type="bit" />
         </EntityType>
         <EntityType Name="DocumentDate">
           <Key>
@@ -188,8 +189,7 @@
             <End Role="History" EntitySet="History" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -215,6 +215,7 @@
           <NavigationProperty Name="DocumentDate" Relationship="Self.FK__DocumentD__IDDoc__1BFD2C07" FromRole="Document" ToRole="DocumentDate" />
           <NavigationProperty Name="DocumentFolder" Relationship="Self.FK__DocumentF__IDDoc__182C9B23" FromRole="Document" ToRole="DocumentFolder" />
           <NavigationProperty Name="History" Relationship="Self.FK__History__IDDocum__22AA2996" FromRole="Document" ToRole="History" />
+          <Property Name="Deleted" Type="Boolean" />
         </EntityType>
         <EntityType Name="DocumentDate">
           <Key>
@@ -407,6 +408,7 @@
           <EntitySetMapping Name="Document">
             <EntityTypeMapping TypeName="Models.Document">
               <MappingFragment StoreEntitySet="Document">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="IDLanguge" ColumnName="IDLanguge" />
                 <ScalarProperty Name="Name" ColumnName="Name" />

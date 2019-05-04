@@ -1,14 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.IO;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
+using System.Security.Cryptography;
+using System.Text;
+using System.Web;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Girafile.Models;
+using Action = Girafile.Models.Action;
 
 namespace Girafile.Controllers.API
 {
@@ -39,7 +41,8 @@ namespace Girafile.Controllers.API
         [ResponseType(typeof(void))]
         public IHttpActionResult PutDocument(Guid id, Document document)
         {
-            if (!ModelState.IsValid)
+            
+            if (!ModelState.IsValid && HttpContext.Current.Request.Files.Count != 1)
             {
                 return BadRequest(ModelState);
             }
@@ -72,14 +75,45 @@ namespace Girafile.Controllers.API
 
         // POST: api/Documents
         [ResponseType(typeof(Document))]
-        public IHttpActionResult PostDocument(Document document)
+        public IHttpActionResult PostDocument()
         {
-            if (!ModelState.IsValid)
+            Document document = new Document();
+            if (!ModelState.IsValid && HttpContext.Current.Request.Files.Count != 1)
             {
                 return BadRequest(ModelState);
             }
 
+            document.ID = Guid.NewGuid();
+            document.Name = HttpContext.Current.Request.Files[0].FileName; 
+
+            try
+            {
+                string path = HttpContext.Current.Server.MapPath("~") + "/Files/"; 
+                path += document.ID + Path.GetExtension(document.Name);
+                HttpContext.Current.Request.Files[0].SaveAs(path);
+                document.MD5 = checkMD5(path);
+            }
+            catch
+            {
+
+            }
+
+            //TODO: logika za dohvacanje jezika
+            //TODO: metadata
+            //TODO: keywords
+            
             db.Document.Add(document);
+
+
+            Action akcija = db.Action.Where(l => l.Name.Contains("Add")).FirstOrDefault();
+
+            History history = new History();
+            history.ID = Guid.NewGuid();
+            history.IDAction = akcija.ID;
+            history.IDDocument = document.ID;
+            history.Date = DateTime.Now;
+
+            db.History.Add(history);
 
             try
             {
@@ -110,7 +144,7 @@ namespace Girafile.Controllers.API
                 return NotFound();
             }
 
-            db.Document.Remove(document);
+            document.Deleted = true;
             db.SaveChanges();
 
             return Ok(document);
@@ -128,6 +162,17 @@ namespace Girafile.Controllers.API
         private bool DocumentExists(Guid id)
         {
             return db.Document.Count(e => e.ID == id) > 0;
+        }
+
+        public string checkMD5(string filename)
+        {
+            using (var md5 = MD5.Create())
+            {
+                using (var stream = File.OpenRead(filename))
+                {
+                    return Encoding.Default.GetString(md5.ComputeHash(stream));
+                }
+            }
         }
     }
 }
