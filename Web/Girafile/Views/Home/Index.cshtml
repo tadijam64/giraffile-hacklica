@@ -1,25 +1,164 @@
-﻿@using System.Globalization
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
-        a broad range of clients, including browsers and mobile devices. ASP.NET Web API
-        is an ideal platform for building RESTful applications on the .NET Framework.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+﻿<html>
+<head>
+    <title>Giraffile</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/Content/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/main.css" />
+</head>
+<body id="body">
+
+    <div id="dropArea" class=" animated bounceIn">
+        <div class="innerBorder">
+            <div class="icon">
+                <img src="~/Content/icons/upload.png" />
+            </div>
+            <div class="text">
+                Drop your file here to start upload!
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
+    <div class="chatBot" id="chatBot">
+        <div class="row">
+            <div class="logo">
+                <img src="~/Content/giraffeblinkingloop.gif" />
+            </div>
+            <div class="baloni">
+
+            </div>
+        </div>
+        <div class="form">
+            <input type="text" name="Text" onkeydown="chenageChatbot()" placeholder="Search..." />
+        </div>
+    </div><br class="clearfix" />
+    <div class="lastFive">
+        <div class="title">Last 5 documents</div>
+        <div class="item first">
+            <div class="box"><img src="~/Content/icons/pdf.png" /></div>
+            <div class="text">Fajl novi .pdf</div>
+        </div>
+        <div class="item">
+            <div class="box"><img src="~/Content/icons/pdf.png" /></div>
+            <div class="text">Fajl novi .pdf</div>
+        </div>
+        <div class="item">
+            <div class="box"><img src="~/Content/icons/pdf.png" /></div>
+            <div class="text">Fajl novi .pdf</div>
+        </div>
+        <div class="item">
+            <div class="box"><img src="~/Content/icons/pdf.png" /></div>
+            <div class="text">Fajl novi .pdf</div>
+        </div>
+        <div class="item">
+            <div class="box"><img src="~/Content/icons/pdf.png" onD /></div>
+            <div class="text">Fajl novi .pdf</div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
-    </div>
-</div>
+
+    <form action="~/api/Documents" id="forma" method="post" enctype="multipart/form-data">
+
+        <input type="files[]" id="fileBox" name="nijebitan" />
+
+    </form>
+</body>
+</html>
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+<script src="http://malsup.github.com/jquery.form.js"></script>
+<script src="~/Scripts/jquery.nicescroll.min.js"></script>
+
+<script>
+
+    $(".baloni").niceScroll();
+    var dropZone = document.getElementById('body');
+    var dropZoneLeave = document.getElementById('dropArea');
+    var dragUpaljen = false;
+
+    function chenageChatbot() {
+        $(".lastFive").fadeOut();
+
+        $("#chatBot").css("position", "fixed");
+        $("#chatBot").css("left", "50%");
+        $("#chatBot").css("margin-left", "-130px");
+        $("#chatBot").css("bottom", "50"); 
+        $("#chatBot").css("background", "#ECEFF1"); 
+        $("body").css("background", "#FFF");
+        
+        
+    }
+
+    // Optional.   Show the copy icon when dragging over.  Seems to only work for chrome.
+    dropZone.addEventListener('dragover', function (e) {
+
+        if (!dragUpaljen) {
+            $('#dropArea').show().removeClass().addClass('animated bounceIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $(this).removeClass();
+            });
+
+
+            dragUpaljen = true;
+
+
+        }
+
+        e.stopPropagation();
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'copy';
+    });
+
+    /* dropZoneLeave.addEventListener('dragleave', function (e) {
+
+         console.log(12);
+
+         $('#dropArea').hide();
+         dragUpaljen = false;
+         e.stopPropagation();
+         e.preventDefault();
+     });*/
+
+    dropZoneLeave.addEventListener('drop', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        var files = e.dataTransfer.files[0];
+
+        $('#dropArea').hide();
+        dragUpaljen = false;
+
+        var ajaxData = new FormData($("#forma").get(0));
+        ajaxData.append($("#fileBox").attr('name'), files);
+
+        $.ajax({
+            url: 'api/Documents',
+            type: 'POST',
+            data: ajaxData,
+            dataType: 'json',
+            cache: false,
+            contentType: false,
+            processData: false,
+            beforeSend: function () {
+                $(".logo").html('<img src="/Content/giraffelooping.gif" />');
+                $(".baloni").prepend('<div class="item zirafa animate bounceIn" id="zvacem">Zvacem datoteke....</div>')
+            },
+            complete: function () {
+            },
+            success: function (data) {
+                $("#zvacem").hide();
+                $(".baloni").prepend('<div class="item success animate bounceIn" id="zvacem">File upload succesful</div>');
+                $(".logo").html('<img src="/Content/confettistaticfixed.gif" />');
+            },
+            error: function () {
+                // Log the error, show an alert, whatever works for you
+            }
+        });
+    });
+
+
+
+
+
+</script>
+
+

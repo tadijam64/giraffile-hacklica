@@ -48,5 +48,5 @@ def extractTextFromPath(docPath):
     operationLocation = requestImageAnalysis(doc)
     if "pdf" or "tiff" in docPath.lower():
         time.sleep(10)
-
+    
     return getImageAnalysisResult(operationLocation)
