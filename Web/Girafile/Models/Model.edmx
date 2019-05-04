@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Action">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="IDLanguge" Type="uniqueidentifier" />
+          <Property Name="Name" Type="text" />
+          <Property Name="MetaData" Type="text" />
+          <Property Name="Keywords" Type="text" />
+          <Property Name="MD5" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="DocumentDate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="IDDocument" Type="uniqueidentifier" />
+          <Property Name="Name" Type="nvarchar" MaxLength="128" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="NotificationSent" Type="bit" />
+        </EntityType>
+        <EntityType Name="DocumentFolder">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="IDDocument" Type="uniqueidentifier" />
+          <Property Name="IDFolder" Type="uniqueidentifier" />
+          <Property Name="Type" Type="int" />
+        </EntityType>
+        <EntityType Name="Folder">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="IDParent" Type="uniqueidentifier" />
+          <Property Name="Name" Type="text" />
+        </EntityType>
+        <EntityType Name="History">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="IDAction" Type="uniqueidentifier" />
+          <Property Name="IDDocument" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Language">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="64" />
+          <Property Name="Short" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <Association Name="FK__Document__IDLang__1273C1CD">
+          <End Role="Language" Type="Self.Language" Multiplicity="0..1" />
+          <End Role="Document" Type="Self.Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="IDLanguge" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DocumentD__IDDoc__1BFD2C07">
+          <End Role="Document" Type="Self.Document" Multiplicity="0..1" />
+          <End Role="DocumentDate" Type="Self.DocumentDate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Document">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DocumentDate">
+              <PropertyRef Name="IDDocument" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DocumentF__IDDoc__182C9B23">
+          <End Role="Document" Type="Self.Document" Multiplicity="0..1" />
+          <End Role="DocumentFolder" Type="Self.DocumentFolder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Document">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DocumentFolder">
+              <PropertyRef Name="IDDocument" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DocumentF__IDFol__1920BF5C">
+          <End Role="Folder" Type="Self.Folder" Multiplicity="0..1" />
+          <End Role="DocumentFolder" Type="Self.DocumentFolder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Folder">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DocumentFolder">
+              <PropertyRef Name="IDFolder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Folder__IDParent__15502E78">
+          <End Role="Folder" Type="Self.Folder" Multiplicity="0..1" />
+          <End Role="Folder1" Type="Self.Folder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Folder">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Folder1">
+              <PropertyRef Name="IDParent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__History__IDActio__21B6055D">
+          <End Role="Action" Type="Self.Action" Multiplicity="0..1" />
+          <End Role="History" Type="Self.History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Action">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="History">
+              <PropertyRef Name="IDAction" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__History__IDDocum__22AA2996">
+          <End Role="Document" Type="Self.Document" Multiplicity="0..1" />
+          <End Role="History" Type="Self.History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Document">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="History">
+              <PropertyRef Name="IDDocument" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ModelsStoreContainer">
+          <EntitySet Name="Action" EntityType="Self.Action" Schema="officebeebiz_giraffe" store:Type="Tables" />
+          <EntitySet Name="Document" EntityType="Self.Document" Schema="officebeebiz_giraffe" store:Type="Tables" />
+          <EntitySet Name="DocumentDate" EntityType="Self.DocumentDate" Schema="officebeebiz_giraffe" store:Type="Tables" />
+          <EntitySet Name="DocumentFolder" EntityType="Self.DocumentFolder" Schema="officebeebiz_giraffe" store:Type="Tables" />
+          <EntitySet Name="Folder" EntityType="Self.Folder" Schema="officebeebiz_giraffe" store:Type="Tables" />
+          <EntitySet Name="History" EntityType="Self.History" Schema="officebeebiz_giraffe" store:Type="Tables" />
+          <EntitySet Name="Language" EntityType="Self.Language" Schema="officebeebiz_giraffe" store:Type="Tables" />
+          <AssociationSet Name="FK__Document__IDLang__1273C1CD" Association="Self.FK__Document__IDLang__1273C1CD">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="Document" EntitySet="Document" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DocumentD__IDDoc__1BFD2C07" Association="Self.FK__DocumentD__IDDoc__1BFD2C07">
+            <End Role="Document" EntitySet="Document" />
+            <End Role="DocumentDate" EntitySet="DocumentDate" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DocumentF__IDDoc__182C9B23" Association="Self.FK__DocumentF__IDDoc__182C9B23">
+            <End Role="Document" EntitySet="Document" />
+            <End Role="DocumentFolder" EntitySet="DocumentFolder" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DocumentF__IDFol__1920BF5C" Association="Self.FK__DocumentF__IDFol__1920BF5C">
+            <End Role="Folder" EntitySet="Folder" />
+            <End Role="DocumentFolder" EntitySet="DocumentFolder" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Folder__IDParent__15502E78" Association="Self.FK__Folder__IDParent__15502E78">
+            <End Role="Folder" EntitySet="Folder" />
+            <End Role="Folder1" EntitySet="Folder" />
+          </AssociationSet>
+          <AssociationSet Name="FK__History__IDActio__21B6055D" Association="Self.FK__History__IDActio__21B6055D">
+            <End Role="Action" EntitySet="Action" />
+            <End Role="History" EntitySet="History" />
+          </AssociationSet>
+          <AssociationSet Name="FK__History__IDDocum__22AA2996" Association="Self.FK__History__IDDocum__22AA2996">
+            <End Role="Document" EntitySet="Document" />
+            <End Role="History" EntitySet="History" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Action">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="History" Relationship="Self.FK__History__IDActio__21B6055D" FromRole="Action" ToRole="History" />
+        </EntityType>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="IDLanguge" Type="Guid" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MetaData" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Keywords" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MD5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Language" Relationship="Self.FK__Document__IDLang__1273C1CD" FromRole="Document" ToRole="Language" />
+          <NavigationProperty Name="DocumentDate" Relationship="Self.FK__DocumentD__IDDoc__1BFD2C07" FromRole="Document" ToRole="DocumentDate" />
+          <NavigationProperty Name="DocumentFolder" Relationship="Self.FK__DocumentF__IDDoc__182C9B23" FromRole="Document" ToRole="DocumentFolder" />
+          <NavigationProperty Name="History" Relationship="Self.FK__History__IDDocum__22AA2996" FromRole="Document" ToRole="History" />
+        </EntityType>
+        <EntityType Name="DocumentDate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="IDDocument" Type="Guid" />
+          <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NotificationSent" Type="Boolean" />
+          <NavigationProperty Name="Document" Relationship="Self.FK__DocumentD__IDDoc__1BFD2C07" FromRole="DocumentDate" ToRole="Document" />
+        </EntityType>
+        <EntityType Name="DocumentFolder">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="IDDocument" Type="Guid" />
+          <Property Name="IDFolder" Type="Guid" />
+          <Property Name="Type" Type="Int32" />
+          <NavigationProperty Name="Document" Relationship="Self.FK__DocumentF__IDDoc__182C9B23" FromRole="DocumentFolder" ToRole="Document" />
+          <NavigationProperty Name="Folder" Relationship="Self.FK__DocumentF__IDFol__1920BF5C" FromRole="DocumentFolder" ToRole="Folder" />
+        </EntityType>
+        <EntityType Name="Folder">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="IDParent" Type="Guid" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DocumentFolder" Relationship="Self.FK__DocumentF__IDFol__1920BF5C" FromRole="Folder" ToRole="DocumentFolder" />
+          <NavigationProperty Name="Folder1" Relationship="Self.FK__Folder__IDParent__15502E78" FromRole="Folder" ToRole="Folder1" />
+          <NavigationProperty Name="Folder2" Relationship="Self.FK__Folder__IDParent__15502E78" FromRole="Folder1" ToRole="Folder" />
+        </EntityType>
+        <EntityType Name="History">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="IDAction" Type="Guid" />
+          <Property Name="IDDocument" Type="Guid" />
+          <NavigationProperty Name="Action" Relationship="Self.FK__History__IDActio__21B6055D" FromRole="History" ToRole="Action" />
+          <NavigationProperty Name="Document" Relationship="Self.FK__History__IDDocum__22AA2996" FromRole="History" ToRole="Document" />
+        </EntityType>
+        <EntityType Name="Language">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Short" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Document" Relationship="Self.FK__Document__IDLang__1273C1CD" FromRole="Language" ToRole="Document" />
+        </EntityType>
+        <Association Name="FK__History__IDActio__21B6055D">
+          <End Role="Action" Type="Self.Action" Multiplicity="0..1" />
+          <End Role="History" Type="Self.History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Action">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="History">
+              <PropertyRef Name="IDAction" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Document__IDLang__1273C1CD">
+          <End Role="Language" Type="Self.Language" Multiplicity="0..1" />
+          <End Role="Document" Type="Self.Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="IDLanguge" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DocumentD__IDDoc__1BFD2C07">
+          <End Role="Document" Type="Self.Document" Multiplicity="0..1" />
+          <End Role="DocumentDate" Type="Self.DocumentDate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Document">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DocumentDate">
+              <PropertyRef Name="IDDocument" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DocumentF__IDDoc__182C9B23">
+          <End Role="Document" Type="Self.Document" Multiplicity="0..1" />
+          <End Role="DocumentFolder" Type="Self.DocumentFolder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Document">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DocumentFolder">
+              <PropertyRef Name="IDDocument" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__History__IDDocum__22AA2996">
+          <End Role="Document" Type="Self.Document" Multiplicity="0..1" />
+          <End Role="History" Type="Self.History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Document">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="History">
+              <PropertyRef Name="IDDocument" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DocumentF__IDFol__1920BF5C">
+          <End Role="Folder" Type="Self.Folder" Multiplicity="0..1" />
+          <End Role="DocumentFolder" Type="Self.DocumentFolder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Folder">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DocumentFolder">
+              <PropertyRef Name="IDFolder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Folder__IDParent__15502E78">
+          <End Role="Folder" Type="Self.Folder" Multiplicity="0..1" />
+          <End Role="Folder1" Type="Self.Folder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Folder">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Folder1">
+              <PropertyRef Name="IDParent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GiraffileEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Action" EntityType="Self.Action" />
+          <EntitySet Name="Document" EntityType="Self.Document" />
+          <EntitySet Name="DocumentDate" EntityType="Self.DocumentDate" />
+          <EntitySet Name="DocumentFolder" EntityType="Self.DocumentFolder" />
+          <EntitySet Name="Folder" EntityType="Self.Folder" />
+          <EntitySet Name="History" EntityType="Self.History" />
+          <EntitySet Name="Language" EntityType="Self.Language" />
+          <AssociationSet Name="FK__History__IDActio__21B6055D" Association="Self.FK__History__IDActio__21B6055D">
+            <End Role="Action" EntitySet="Action" />
+            <End Role="History" EntitySet="History" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Document__IDLang__1273C1CD" Association="Self.FK__Document__IDLang__1273C1CD">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="Document" EntitySet="Document" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DocumentD__IDDoc__1BFD2C07" Association="Self.FK__DocumentD__IDDoc__1BFD2C07">
+            <End Role="Document" EntitySet="Document" />
+            <End Role="DocumentDate" EntitySet="DocumentDate" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DocumentF__IDDoc__182C9B23" Association="Self.FK__DocumentF__IDDoc__182C9B23">
+            <End Role="Document" EntitySet="Document" />
+            <End Role="DocumentFolder" EntitySet="DocumentFolder" />
+          </AssociationSet>
+          <AssociationSet Name="FK__History__IDDocum__22AA2996" Association="Self.FK__History__IDDocum__22AA2996">
+            <End Role="Document" EntitySet="Document" />
+            <End Role="History" EntitySet="History" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DocumentF__IDFol__1920BF5C" Association="Self.FK__DocumentF__IDFol__1920BF5C">
+            <End Role="Folder" EntitySet="Folder" />
+            <End Role="DocumentFolder" EntitySet="DocumentFolder" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Folder__IDParent__15502E78" Association="Self.FK__Folder__IDParent__15502E78">
+            <End Role="Folder" EntitySet="Folder" />
+            <End Role="Folder1" EntitySet="Folder" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="GiraffileEntities">
+          <EntitySetMapping Name="Action">
+            <EntityTypeMapping TypeName="Models.Action">
+              <MappingFragment StoreEntitySet="Action">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Document">
+            <EntityTypeMapping TypeName="Models.Document">
+              <MappingFragment StoreEntitySet="Document">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDLanguge" ColumnName="IDLanguge" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="MetaData" ColumnName="MetaData" />
+                <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+                <ScalarProperty Name="MD5" ColumnName="MD5" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DocumentDate">
+            <EntityTypeMapping TypeName="Models.DocumentDate">
+              <MappingFragment StoreEntitySet="DocumentDate">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDDocument" ColumnName="IDDocument" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="NotificationSent" ColumnName="NotificationSent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DocumentFolder">
+            <EntityTypeMapping TypeName="Models.DocumentFolder">
+              <MappingFragment StoreEntitySet="DocumentFolder">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDDocument" ColumnName="IDDocument" />
+                <ScalarProperty Name="IDFolder" ColumnName="IDFolder" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Folder">
+            <EntityTypeMapping TypeName="Models.Folder">
+              <MappingFragment StoreEntitySet="Folder">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDParent" ColumnName="IDParent" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="History">
+            <EntityTypeMapping TypeName="Models.History">
+              <MappingFragment StoreEntitySet="History">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="IDAction" ColumnName="IDAction" />
+                <ScalarProperty Name="IDDocument" ColumnName="IDDocument" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Language">
+            <EntityTypeMapping TypeName="Models.Language">
+              <MappingFragment StoreEntitySet="Language">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Short" ColumnName="Short" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
