@@ -1,25 +1,162 @@
-﻿@using System.Globalization
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
-        a broad range of clients, including browsers and mobile devices. ASP.NET Web API
-        is an ideal platform for building RESTful applications on the .NET Framework.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
-    </div>
-</div>
+﻿<html>
+<head>
+    <title>Giraffile</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <style>
+        body {
+            background: #eceff1;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            margin-top:10%;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            width:250px;
+            position:relative;
+            left:50%;
+            margin-left:-300px;
+            margin-bottom:-20px;
+        }
+
+        .logo img {
+            width:250px;
+        }
+
+        .form {
+            width: 500px;
+            height: 50px;
+            position:relative;
+            left: 50%;
+            margin-left: -250px;
+        }
+
+            .form input {
+                width: 100%;
+                height: 100%;
+                border: 0;
+                -webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+                box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+                padding: 20px;
+                box-sizing: border-box;
+                -webkit-border-radius: 5px;
+                border-radius: 5px;
+                font-size:1.1em;
+                color:#333;
+            }
+
+            .lastFive {
+                width:675px;
+                position:relative;
+                left:50%;
+                margin-left: -337.5px;
+                margin-top:4%;
+            }
+
+            .lastFive .item {
+                width:95px;
+                text-align:center;
+                float:left;
+                margin-left:50px;
+            }
+
+            .lastFive:first-child, .lastFive .first {
+                margin-left:0px;
+            }
+
+        .lastFive .item .box {
+            width: 95px;
+            padding: 10px;
+            padding-top: 35px;
+            padding-bottom: 0;
+            background: #222;
+            text-align: center;
+            -webkit-border-radius: 5000px;
+            border-radius: 5000px;
+        }
+                .lastFive .item .text {
+                    width: 95px;
+                    padding-left:8px;
+                    text-align: center;
+                   
+                }
+        .lastFive .item img{
+            width:75px;
+            margin-left:-5px;
+        }
+
+        .dropArea {
+            width:70%;
+            height:70%;
+            margin-top:-5%;
+            background:rgba(255,255,255,0.5);
+            position:fixed;
+            z-index:999;
+            left:50%;
+            margin-left:-35%;
+        }
+
+        .dropArea .innerBorder {
+            width:96.5%;
+            height:94%;
+            position:relative;
+            left:1.4%;
+            top:3%;
+            border:3px dashed rgba(34,34,34, 0.5);
+        }
+    </style>
+</head>
+    <body id="body">
+
+        <div class="dropArea">
+            <div class="innerBorder"></div>
+        </div>
+
+        <div class="logo">
+            <img src="~/Content/giraffeeating.gif" />
+        </div>
+        <div class="form">
+            <input type="text" name="Text" placeholder="Search..." />
+        </div>
+        <div class="lastFive">
+            <div class="item first">
+                <div class="box"><img src="~/Content/icons/pdf.png" /></div>
+                <div class="text">Fajl novi .pdf</div>
+            </div>
+            <div class="item">
+                <div class="box"><img src="~/Content/icons/pdf.png" /></div>
+                <div class="text">Fajl novi .pdf</div>
+            </div>
+            <div class="item">
+                <div class="box"><img src="~/Content/icons/pdf.png" /></div>
+                <div class="text">Fajl novi .pdf</div>
+            </div>
+            <div class="item">
+                <div class="box"><img src="~/Content/icons/pdf.png" /></div>
+                <div class="text">Fajl novi .pdf</div>
+            </div>
+            <div class="item">
+                <div class="box"><img src="~/Content/icons/pdf.png" /></div>
+                <div class="text">Fajl novi .pdf</div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+
+    var dropZone = document.getElementById('body');
+
+    // Optional.   Show the copy icon when dragging over.  Seems to only work for chrome.
+    dropZone.addEventListener('dragover', function (e) {
+        console.log(1);
+        e.stopPropagation();
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'copy';
+    });
+
+</script>
+
+

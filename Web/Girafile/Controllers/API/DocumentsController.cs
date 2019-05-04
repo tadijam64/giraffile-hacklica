@@ -60,7 +60,7 @@ namespace Girafile.Controllers.API
                 string pathOld = document.ID + "-" + number + Path.GetExtension(document.Name);
                 path += document.ID + Path.GetExtension(document.Name);
 
-                System.IO.File.Move(path, "newfilename");
+                System.IO.File.Move(path, pathOld);
                 HttpContext.Current.Request.Files[0].SaveAs(path);
                 document.MD5 = checkMD5(path);
             }
@@ -99,7 +99,7 @@ namespace Girafile.Controllers.API
         public IHttpActionResult PostDocument()
         {
             Document document = new Document();
-            if (!ModelState.IsValid && HttpContext.Current.Request.Files.Count != 1)
+            if (!ModelState.IsValid || HttpContext.Current.Request.Files.Count != 1)
             {
                 return BadRequest(ModelState);
             }
