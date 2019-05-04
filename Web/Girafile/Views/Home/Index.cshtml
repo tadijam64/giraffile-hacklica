@@ -19,17 +19,18 @@
             </div>
         </div>
     </div>
+    <div class="chatBot" id="chatBot">
+        <div class="row">
+            <div class="logo">
+                <img src="~/Content/giraffeblinkingloop.gif" />
+            </div>
+            <div class="baloni">
 
-    <div class="row">
-        <div class="logo">
-            <img src="~/Content/giraffeblinkingloop.gif" />
+            </div>
         </div>
-        <div class="baloni">
-
+        <div class="form">
+            <input type="text" name="Text" onkeydown="chenageChatbot()" placeholder="Search..." />
         </div>
-    </div>
-    <div class="form">
-        <input type="text" name="Text" placeholder="Search..." />
     </div><br class="clearfix" />
     <div class="lastFive">
         <div class="title">Last 5 documents</div>
@@ -76,6 +77,19 @@
     var dropZoneLeave = document.getElementById('dropArea');
     var dragUpaljen = false;
 
+    function chenageChatbot() {
+        $(".lastFive").fadeOut();
+
+        $("#chatBot").css("position", "fixed");
+        $("#chatBot").css("left", "50%");
+        $("#chatBot").css("margin-left", "-130px");
+        $("#chatBot").css("bottom", "50"); 
+        $("#chatBot").css("background", "#ECEFF1"); 
+        $("body").css("background", "#FFF");
+        
+        
+    }
+
     // Optional.   Show the copy icon when dragging over.  Seems to only work for chrome.
     dropZone.addEventListener('dragover', function (e) {
 
@@ -115,7 +129,7 @@
 
         var ajaxData = new FormData($("#forma").get(0));
         ajaxData.append($("#fileBox").attr('name'), files);
-    
+
         $.ajax({
             url: 'api/Documents',
             type: 'POST',
@@ -132,7 +146,7 @@
             },
             success: function (data) {
                 $("#zvacem").hide();
-                $(".baloni").prepend('<div class="item success animate bounceIn" id="zvacem">File upload succesful</div>');                
+                $(".baloni").prepend('<div class="item success animate bounceIn" id="zvacem">File upload succesful</div>');
                 $(".logo").html('<img src="/Content/confettistaticfixed.gif" />');
             },
             error: function () {

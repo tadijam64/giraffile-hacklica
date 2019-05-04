@@ -10,6 +10,6 @@ namespace Girafile.Models
         public Guid ID { get; set; }
         public string Language { get; set; }
         public string Keywords { get; set; }
-        public string Metadata { get; set; }
+        public List<Metadata> Metadata { get; set; }
     }
 }

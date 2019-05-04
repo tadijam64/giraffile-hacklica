@@ -1,4 +1,5 @@
 ﻿using Girafile.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -19,8 +20,9 @@ namespace Girafile.Controllers.API
 
             if(temp != null)
             {
+
                 temp.Keywords = document.Keywords;
-                temp.MetaData = document.Metadata;
+                temp.MetaData = JsonConvert.SerializeObject(document.Metadata);
                 temp.IDLanguge = (db.Language.Where(l => l.Name.Contains(document.Language)).FirstOrDefault().ID);
 
                 db.Entry(temp).State = EntityState.Modified;
