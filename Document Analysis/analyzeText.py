@@ -15,7 +15,7 @@ def detectLanguage(documents):
     headers   = {"Ocp-Apim-Subscription-Key": subscription_key}
     response  = requests.post(language_api_url, headers=headers, json=documents)
     languages = response.json()
-    pprint(languages)
+    return languages
 
 def analyzeSentiment(documents):
     sentiment_api_url = text_analytics_base_url + "sentiment"
@@ -24,7 +24,7 @@ def analyzeSentiment(documents):
     headers   = {"Ocp-Apim-Subscription-Key": subscription_key}
     response  = requests.post(sentiment_api_url, headers=headers, json=documents)
     sentiments = response.json()
-    pprint(sentiments)
+    return sentiments
 
 
 def extractKeyPhrases(documents):
@@ -33,7 +33,7 @@ def extractKeyPhrases(documents):
     headers   = {'Ocp-Apim-Subscription-Key': subscription_key}
     response  = requests.post(key_phrase_api_url, headers=headers, json=documents)
     key_phrases = response.json()
-    pprint(key_phrases)
+    return key_phrases
 
 
 def extractEntities(documents):
@@ -42,7 +42,7 @@ def extractEntities(documents):
     headers   = {"Ocp-Apim-Subscription-Key": subscription_key}
     response  = requests.post(entity_linking_api_url, headers=headers, json=documents)
     entities = response.json()
-    pprint(entities)
+    return entities
 
 def generateDocuments(textList):
     json = {}
