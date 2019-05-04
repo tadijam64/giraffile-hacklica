@@ -39,18 +39,39 @@ namespace Girafile.Controllers.API
 
         // PUT: api/Documents/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutDocument(Guid id, Document document)
+        public IHttpActionResult PutDocument(Guid id)
         {
             
             if (!ModelState.IsValid && HttpContext.Current.Request.Files.Count != 1)
             {
                 return BadRequest(ModelState);
             }
-
-            if (id != document.ID)
+            Document document = db.Document.Find(id);
+            if (document == null)
             {
                 return BadRequest();
             }
+
+            int number = db.History.Where(l => l.IDAction != db.Action.Where(a => a.Name.Contains("Delete")).First().ID).Count(); 
+            try
+            {
+
+                string path = HttpContext.Current.Server.MapPath("~") + "/Files/";
+                string pathOld = document.ID + "-" + number + Path.GetExtension(document.Name);
+                path += document.ID + Path.GetExtension(document.Name);
+
+                System.IO.File.Move(path, "newfilename");
+                HttpContext.Current.Request.Files[0].SaveAs(path);
+                document.MD5 = checkMD5(path);
+            }
+            catch
+            {
+
+            }
+
+            //TODO: logika za dohvacanje jezika
+            //TODO: metadata
+            //TODO: keywords
 
             db.Entry(document).State = EntityState.Modified;
 
