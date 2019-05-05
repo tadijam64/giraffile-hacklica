@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     /* Background styles */
-    background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)), url('file:///C://development//hacklica//frontend//slike//landing_assets//landingpage.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)), url('landingpage.png');
     background-size: auto 100%;
     background-position: center center;
     background-repeat: no-repeat;
