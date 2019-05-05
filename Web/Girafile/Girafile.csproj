@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.1.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.1.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -169,6 +172,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Common\DodajJezike.cs" />
+    <Compile Include="Common\ProcessTools.cs" />
     <Compile Include="Controllers\API\AnalyzeController.cs" />
     <Compile Include="Controllers\API\DocumentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -187,6 +191,7 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DocumentDTO.cs" />
+    <Compile Include="Models\DocumentDTO2.cs" />
     <Compile Include="Models\DocumentFolder.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -215,15 +220,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\SearchDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\animate.min.css" />
+    <Content Include="Content\avatar.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\chatbotfixed.gif" />
     <Content Include="Content\confettistaticfixed.gif" />
     <Content Include="Content\giraffeblinkingloop.gif" />
     <Content Include="Content\giraffeeating.gif" />
@@ -231,6 +239,7 @@
     <Content Include="Content\giraffestatic.png" />
     <Content Include="Content\icons\pdf.png" />
     <Content Include="Content\icons\upload.png" />
+    <Content Include="Content\logo.png" />
     <Content Include="Content\main.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -296,6 +305,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\Home\Landing.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -19,6 +19,66 @@
             </div>
         </div>
     </div>
+
+    <div class="main">
+       
+        <div class="nav">
+
+        </div>
+
+        <div class="list">
+            <h3>
+                File list
+            </h3>
+            <div class="row">
+                
+            </div>
+       
+
+            
+
+        </div>
+        <div class="details">
+            <table>
+                <tr>
+                    <td colspan="2" class="title">Document info: </td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td>
+                        Filename:
+                    </td>
+                    <td>
+                        <b id="fileName">prvi_file.pdf</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Language:
+                    </td>
+                    <td>
+                        <b id="fileLanguage">Croatian</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Keywords:
+                    </td>
+                    <td>
+                        <b id="fileKeywords">sdasd, dsada, sadds,sdasd,sdsdasč,dsd,sdas,</b>
+                    </td>
+                </tr>
+            </table>
+            <hr />
+            <h3>Document meta:</h3>
+            <div class="metaList">
+                
+               </div>
+        </div>
+    </div>
+
     <div class="chatBot" id="chatBot">
         <div class="row">
             <div class="logo">
@@ -29,12 +89,16 @@
             </div>
         </div>
         <div class="form">
-            <input type="text" name="Text" onkeydown="chenageChatbot()" placeholder="Search..." />
+            <input type="text" name="Text" id="inputBox" onkeydown="chenageChatbot(event)" placeholder="Search..." />
         </div>
+    </div>
+
+
+
     </div><br class="clearfix" />
     <div class="lastFive">
         <div class="title">Last 5 documents</div>
-        <div class="item first">
+        <div class="item first" >
             <div class="box"><img src="~/Content/icons/pdf.png" /></div>
             <div class="text">Fajl novi .pdf</div>
         </div>
@@ -71,21 +135,108 @@
 <script src="~/Scripts/jquery.nicescroll.min.js"></script>
 
 <script>
-
+    var globData; 
     $(".baloni").niceScroll();
+    $(".details").niceScroll();
     var dropZone = document.getElementById('body');
     var dropZoneLeave = document.getElementById('dropArea');
     var dragUpaljen = false;
 
-    function chenageChatbot() {
-        $(".lastFive").fadeOut();
+    function goToLink(link) {
+        var win = window.open(link, '_blank');
+        win.focus();
+    }
+    function otvoriDetalje(idee) {
+        console.log(1);
+        $.each(globData, function () {
+            if (this.ID == idee) {
+                $("#fileName").html(this.Name);
+                $("#fileLanguage").html(this.IDLanguage);
+                $("#fileKeywords").html(this.Keywords);
 
-        $("#chatBot").css("position", "fixed");
-        $("#chatBot").css("left", "50%");
-        $("#chatBot").css("margin-left", "-130px");
-        $("#chatBot").css("bottom", "50"); 
-        $("#chatBot").css("background", "#ECEFF1"); 
-        $("body").css("background", "#FFF");
+                var meta = jQuery.parseJSON(this.MetaData);
+                $(".metaList").html("");
+                $.each(meta, function () {
+                    if (this.wikipediaUrl != null) {
+                        var imageUrl = "/Content/Icons/question-mark.png";
+                        if (this.image != null) {
+                            imageUrl = this.image;
+                        }
+                        var desc = "Description not found.";
+                        if (this.wikipediaSummary != null) {
+                            desc = this.wikipediaSummary;
+                        }
+                        $(".metaList").append('<div class="item" onClick="goToLink(\'' + this.wikipediaUrl + '\')">\
+                        <div class="image"><img src="'+ imageUrl + '" width="50px" /> \
+                    </div >\
+                        <div class="title">\
+                            '+ this.name + '\
+                    </div>\
+                        <div class="desc">\
+                            '+ desc + '\
+                    </div>\
+                </div ><br class="clearfix">')
+                    }
+                });
+                
+
+            }
+        });
+
+        $(".details").slideDown();
+        $(".list").css("width", "75%");
+    }
+    
+
+    function chenageChatbot(e) {
+
+        if (e.keyCode == 13) {
+
+            $(".lastFive").fadeOut();
+            $("#chatBot").css("position", "fixed");
+            $("#chatBot").css("left", "50%");
+            $("#chatBot").css("margin-left", "-250px");
+            $("#chatBot").css("bottom", "50");
+
+            
+            $(".main").show();
+            $(".list").fadeIn();
+            $(".nav").slideDown();
+
+            //Pozovi API 
+            $.ajax({
+                url: 'api/Documents?query=' + $("#inputBox").val(),
+                type: 'GET',
+                beforeSend: function () {
+                    $(".logo").html('<img src="/Content/chatbotfixed.gif" />');
+                    $(".baloni").prepend('<div class="item zirafa animate bounceIn" id="zvacem">Let me see what can I doo for you...</div>')
+                },
+                complete: function () {
+                },
+                success: function (data) {
+                    globData = data;
+                    $(".main .list .row").html("");
+                    $.each(data, function () {
+                        $(".main .list .row").append('<div class="item" onClick="otvoriDetalje(\''+this.ID+'\')"><div class= "box"><img src="Content/icons/pdf.png" /></div><div class="text">'+this.Name+'</div></div >');
+                    });
+                        
+                    $("#zvacem").hide();
+                    $(".baloni").prepend('<div class="item success animate bounceIn" id="zvacem">Done!</div>');
+                    $(".logo").html('<img src="/Content/confettistaticfixed.gif" />');
+                },
+                error: function () {
+                    // Log the error, show an alert, whatever works for you
+                }
+            });
+
+        }
+        else {
+            /*$(".lastFive").fadeIn();
+            $("#chatBot").css("position", "relative");
+            $("#chatBot").css("left", "50%");
+            $("#chatBot").css("margin-left", "-250");
+            $("#chatBot").css("bottom", "50");*/
+        }
         
         
     }
@@ -140,13 +291,13 @@
             processData: false,
             beforeSend: function () {
                 $(".logo").html('<img src="/Content/giraffelooping.gif" />');
-                $(".baloni").prepend('<div class="item zirafa animate bounceIn" id="zvacem">Zvacem datoteke....</div>')
+                $(".baloni").prepend('<div class="item zirafa animate bounceIn" id="zvacem">Chewing through your files...</div>')
             },
             complete: function () {
             },
             success: function (data) {
                 $("#zvacem").hide();
-                $(".baloni").prepend('<div class="item success animate bounceIn" id="zvacem">File upload succesful</div>');
+                $(".baloni").prepend('<div class="item success animate bounceIn" id="zvacem">File upload succesful!</div>');
                 $(".logo").html('<img src="/Content/confettistaticfixed.gif" />');
             },
             error: function () {
