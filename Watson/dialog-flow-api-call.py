@@ -11,11 +11,6 @@ def detect_intent_texts(project_id, session_id, texts, language_code):
 
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:\\Users\\tadija\\Desktop\\project\\Watson\\document-search-chatbot-42134bacfbd1.json"
 
-    """Returns the result of detect intent with texts as inputs.
-
-    Using the same `session_id` between requests allows continuation
-    of the conversation."""
-
     import dialogflow_v2 as dialogflow
     session_client = dialogflow.SessionsClient()
 

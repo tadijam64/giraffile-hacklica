@@ -15,7 +15,6 @@ def detect_intent_audio(project_id, session_id, audio_file_path,
 
     session_client = dialogflow.SessionsClient()
 
-    # Note: hard coding audio_encoding and sample_rate_hertz for simplicity.
     audio_encoding = dialogflow.enums.AudioEncoding.AUDIO_ENCODING_LINEAR_16
     sample_rate_hertz = 16000
 
