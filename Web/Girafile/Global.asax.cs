@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AutoMapper;
+using Girafile.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +20,14 @@ namespace Girafile
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Mapper.Initialize(cfg =>
+            {
+                //cfg.CreateMap<List<DocumentDTO2>, List<Document>>();
+                //cfg.CreateMap<List<Document>, List<DocumentDTO2>>();
+                cfg.CreateMap<DocumentDTO2,Document>();
+                cfg.CreateMap<Document, DocumentDTO2>();
+            });
         }
     }
 }

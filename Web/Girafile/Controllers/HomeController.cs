@@ -12,9 +12,16 @@ namespace Girafile.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            if(User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return View("Landing");  
+            }
 
-            return View();
+            
         }
     }
 }

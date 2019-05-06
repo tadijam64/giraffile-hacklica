@@ -1,15 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.Description;
+using AutoMapper;
+using Girafile.Common;
 using Girafile.Models;
+using Newtonsoft.Json;
 using Action = Girafile.Models.Action;
 
 namespace Girafile.Controllers.API
@@ -19,9 +25,98 @@ namespace Girafile.Controllers.API
         private GiraffileEntities db = new GiraffileEntities();
 
         // GET: api/Documents
-        public IQueryable<Document> GetDocument()
+        public List<DocumentDTO2> GetDocument(string query)
         {
-            return db.Document;
+            Guid temp = new Guid("e674aeac-6d25-4e3c-a54e-d889419f79a5"); //Guid.NewGuid();
+
+            string basePath = HttpContext.Current.Server.MapPath("~") + @"\Query\";
+
+            File.WriteAllText(basePath + temp +".txt", query);
+
+            while(!File.Exists(basePath + @"\Response\" + temp + ".txt"))
+            {
+                Thread.Sleep(300);
+            }
+
+            string keywordsTemp = File.ReadAllText(basePath + @"\Response\" + temp + ".txt");
+            File.Delete(basePath + temp + ".txt");
+            //File.Delete(basePath + @"\Response\" + temp + ".txt");
+
+
+            //TODO: Search 
+            List<Document> documents = db.Document.ToList();
+            List<Document> ret = new List<Document>();
+
+            SearchDTO searchDTO = JsonConvert.DeserializeObject<SearchDTO>(keywordsTemp);
+
+
+
+           
+            
+            foreach(Document doc in documents)
+            {
+                int brojPogodaka = 0;
+                if (doc.Language != null && searchDTO.language != null)
+                {
+                    if(doc.Language.Name.Contains(searchDTO.language))
+                    {
+                        brojPogodaka += 100;
+                    }    
+                }
+
+                bool dateS = false;
+                if(searchDTO.dateFrom != null && searchDTO.dateTo == null)
+                {
+                    searchDTO.dateTo = DateTime.MaxValue.ToString("yyyy-MM-dd");
+                    dateS = true;
+                }
+                else if (searchDTO.dateFrom == null && searchDTO.dateTo != null)
+                {
+                    searchDTO.dateFrom = DateTime.MinValue.ToString("yyyy-MM-dd");
+                    dateS = true;
+                }
+                else if (searchDTO.dateFrom != null && searchDTO.dateTo != null)
+                {
+                    dateS = true;
+                }
+
+                if(dateS)
+                {
+                    DateTime to = DateTime.Parse(searchDTO.dateTo);
+                    DateTime from = DateTime.Parse(searchDTO.dateFrom);
+
+                    if(doc.History.Where(l => l.Date >= from && l.Date <= to && l.Action.Name == "Add").Count() > 0)
+                    {
+                        brojPogodaka += 50;
+                    }
+                }
+
+                if (doc.Keywords != null)
+                {
+                    string[] keys = doc.Keywords.Split(';');
+                    
+                    foreach (string key in keys)
+                    {
+                        if (searchDTO.Keywords.Contains(key))
+                        {
+                            brojPogodaka++;
+                        }
+                    }
+                }
+                doc.MD5 = brojPogodaka.ToString();
+                if (brojPogodaka > 0)
+                {
+                    doc.Language = null;
+                    doc.History = null;
+                    
+                    ret.Add(doc);
+                }
+            }
+
+            
+
+            List<DocumentDTO2> lista = Mapper.Map<List<DocumentDTO2>>(ret.OrderByDescending(l => int.Parse(l.MD5)).ToList());
+            return lista;
         }
 
         // GET: api/Documents/5
@@ -52,11 +147,12 @@ namespace Girafile.Controllers.API
                 return BadRequest();
             }
 
-            int number = db.History.Where(l => l.IDAction != db.Action.Where(a => a.Name.Contains("Delete")).First().ID).Count(); 
+            int number = db.History.Where(l => l.IDAction != db.Action.Where(a => a.Name.Contains("Delete")).First().ID).Count();
+            string path = "";
             try
             {
 
-                string path = HttpContext.Current.Server.MapPath("~") + "/Files/";
+                 path = HttpContext.Current.Server.MapPath("~") + "/Files/";
                 string pathOld = document.ID + "-" + number + Path.GetExtension(document.Name);
                 path += document.ID + Path.GetExtension(document.Name);
 
@@ -69,9 +165,21 @@ namespace Girafile.Controllers.API
 
             }
 
-            //TODO: logika za dohvacanje jezika
-            //TODO: metadata
-            //TODO: keywords
+            //var proc1 = new ProcessStartInfo();
+            //proc1.UseShellExecute = true;
+            //proc1.WorkingDirectory = @"C:\Windows\System32";
+            //proc1.FileName = @"cmd.exe";
+            //proc1.Arguments = "/k " + @"python C:\Users\zirafa\Desktop\Document Analysis\analyze.py " + path + " " + document.ID;
+
+            var proc2 = new ProcessStartInfo();
+            proc2.UseShellExecute = true;
+            proc2.WorkingDirectory = @"C:\Windows\System32";
+            proc2.FileName = @"cmd.exe";
+            proc2.Arguments = "/k " + @"mkdir C:\Leo " + path + " " + document.ID;
+
+            //Process.Start(proc1);
+            Process.Start(proc2);
+            
 
             db.Entry(document).State = EntityState.Modified;
 
@@ -125,11 +233,11 @@ namespace Girafile.Controllers.API
             }
 
             document.ID = Guid.NewGuid();
-            document.Name = HttpContext.Current.Request.Files[0].FileName; 
-
+            document.Name = HttpContext.Current.Request.Files[0].FileName;
+            string path = "";
             try
             {
-                string path = HttpContext.Current.Server.MapPath("~") + "/Files/"; 
+                 path = HttpContext.Current.Server.MapPath("~") + "Files\\"; 
                 path += document.ID + Path.GetExtension(document.Name);
                 HttpContext.Current.Request.Files[0].SaveAs(path);
                 document.MD5 = checkMD5(path);
@@ -139,12 +247,7 @@ namespace Girafile.Controllers.API
 
             }
 
-            //TODO: logika za dohvacanje jezika
-            //TODO: metadata
-            //TODO: keywords
-            
             db.Document.Add(document);
-
 
             Action akcija = db.Action.Where(l => l.Name.Contains("Add")).FirstOrDefault();
 
@@ -172,6 +275,7 @@ namespace Girafile.Controllers.API
                 }
             }
 
+         
             return CreatedAtRoute("DefaultApi", new { id = document.ID }, document);
         }
 

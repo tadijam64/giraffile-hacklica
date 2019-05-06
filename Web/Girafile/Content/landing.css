@@ -1,0 +1,132 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+}
+
+.hero {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    /* Sizing */
+    width: 100vw;
+    height: 90vh;
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Background styles */
+    background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)), url('landingpage.png');
+    background-size: auto 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    border-style: outset;
+}
+
+    .hero h1 {
+        /* Text styles */
+        font-size: 3em;
+        /* Margins */
+        margin-top: 0;
+        margin-bottom: 0.5em;
+    }
+
+    .hero .btn {
+        /* Positioning and sizing */
+        display: block;
+        width: 200px;
+        /* Padding and margins */
+        padding: 1em;
+        margin-left: auto;
+        margin-right: auto;
+        /* Text styles */
+        color: white; /* CHANGE THIS LINE */
+        text-decoration: none;
+        font-size: 1.5em;
+        /* Border styles */
+        /*border: 3px solid white; /* CHANGE THIS LINE */
+        border-radius: 10px;
+        /* Background styles */
+        background-color: rgba(33,150,243, 0.8);
+    }
+
+
+#buttonLogin {
+    float: left;
+    margin-right: 25px;
+    margin-left: 50px;
+    text-align: center;
+}
+
+#buttonRegister {
+    float: left;
+    background-color: rgba(52,58,64, 0.8);
+    text-align: center;
+}
+
+img {
+    height: auto;
+    width: auto;
+    max-width: 80px;
+    max-height: 80px;
+    position: relative;
+}
+
+#buttons {
+    position: center;
+}
+
+/*This will cause the img receive float none rule when screen is smaller than 768px*/
+@media only screen and (max-width: 768px) {
+    #buttonLogin {
+        float: none;
+        display: inline-block;
+        margin-top: -10px;
+        width: 30%;
+        box-shadow: 0px 5px 0px 0px #3C93D5;
+    }
+
+    #buttonRegister {
+        float: none;
+        display: inline-block;
+        margin-top: -5px;
+        width: 30%;
+        box-shadow: 0px 5px 0px 0px #3C93D5;
+    }
+
+    .buttons {
+        position: center;
+        display: inline-block;
+    }
+}
+
+h2 {
+    position: center;
+    display: inline-block;
+}
+
+.logo {
+    position: relative;
+    margin-bottom: -108px;
+    margin-top: 0px;
+    clear: left;
+    height: auto;
+    z-index: 0;
+    text-align: center;
+}
+
+#h2 {
+    font-size: 30px;
+}
+
+#middleText {
+    text-align: left;
+}
+
+#middleButtons {
+    float: left;
+}
+
+#middleBox {
+    margin-right: 50%;
+}
