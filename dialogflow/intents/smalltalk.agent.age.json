@@ -1,0 +1,41 @@
+{
+  "id": "c2b25df6-19a6-4b8f-967b-207215dd9108",
+  "name": "smalltalk.agent.age",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "smalltalk.agent.age",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "72535833-6949-4527-9bc1-ac9297dc2dcc",
+          "required": false,
+          "dataType": "@sys.number",
+          "name": "age",
+          "value": "$age",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "Uhm, not much older than 24h.",
+            "A day or so."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1529623747,
+  "fallbackIntent": false,
+  "events": []
+}

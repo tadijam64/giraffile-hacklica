@@ -1,0 +1,29 @@
+{
+  "id": "0ce2350d-ea90-4722-8e70-017f3c2ca2b9",
+  "name": "smalltalk.agent.be_clever",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "smalltalk.agent.be_clever",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Well taking into account the guys who made me, I\u0027d say I\u0027m blessed as is."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1529433334,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,32 @@
+{
+  "id": "92334b62-3941-431c-a416-7eea5ee331ec",
+  "name": "smalltalk.agent.chatbot",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "smalltalk.agent.chatbot",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "Hey, you\u0027re gonna give me an existential crisis.",
+            "You\u0027re a very observant, *real*, maybe not so quite intelligent being."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1529435704,
+  "fallbackIntent": false,
+  "events": []
+}

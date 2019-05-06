@@ -1,0 +1,9 @@
+{
+  "id": "bc7f4209-20c7-4e80-9175-685ac7d0e2d6",
+  "name": "dayofweek",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": false
+}

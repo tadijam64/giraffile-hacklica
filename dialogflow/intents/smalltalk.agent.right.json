@@ -1,0 +1,32 @@
+{
+  "id": "3b1db444-851c-435d-a65f-b0df15caa2d6",
+  "name": "smalltalk.agent.right",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "smalltalk.agent.right",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "That\u0027s my job.",
+            "Of course I am."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1529436547,
+  "fallbackIntent": false,
+  "events": []
+}

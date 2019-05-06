@@ -1,0 +1,62 @@
+{
+  "id": "411c0128-369a-470f-9eea-ebd95cda3ae4",
+  "name": "date.between",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "date.between",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "1c521611-49b5-4d19-a086-e3f72d71bd2f",
+          "required": false,
+          "dataType": "@sys.date",
+          "name": "date-1",
+          "value": "$date-1",
+          "isList": false
+        },
+        {
+          "id": "095a7e43-dc4a-4fe4-8a44-9c7a77a785e5",
+          "required": false,
+          "dataType": "@sys.date",
+          "name": "date-2",
+          "value": "$date-2",
+          "isList": false
+        },
+        {
+          "id": "ab08cd95-b579-4156-89a2-d84719ea3abb",
+          "required": false,
+          "dataType": "@unit-time",
+          "name": "unit",
+          "value": "$unit",
+          "isList": false
+        },
+        {
+          "id": "dea48efd-a9ad-47d5-95a7-78ce4a389c86",
+          "required": false,
+          "dataType": "@sys.date-period",
+          "name": "date-period",
+          "value": "$date-period",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 1000000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1504180922893,
+  "fallbackIntent": false,
+  "events": []
+}

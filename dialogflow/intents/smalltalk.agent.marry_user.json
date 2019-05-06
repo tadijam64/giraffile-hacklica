@@ -1,0 +1,34 @@
+{
+  "id": "e1ebebc3-e253-45ac-8772-ab53224b77de",
+  "name": "smalltalk.agent.marry_user",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "smalltalk.agent.marry_user",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Are you a document eating giraffe? Didn\u0027t think so."
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Bestiality? Niiiice."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1529436039,
+  "fallbackIntent": false,
+  "events": []
+}

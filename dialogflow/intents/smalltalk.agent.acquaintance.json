@@ -1,0 +1,32 @@
+{
+  "id": "592071ea-c07b-493f-9428-f90a7be4cf0d",
+  "name": "smalltalk.agent.acquaintance",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "smalltalk.agent.acquaintance",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "I\u0027m Girrafile, your tall, document-chewing, life-saving, friendly Giraffe.",
+            "I\u0027m the tall thing that keeps eating up your docs."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1529077948,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,51 @@
+{
+  "id": "c6de0d59-2154-4ffa-ab23-70ee882588d6",
+  "name": "document_info",
+  "auto": true,
+  "contexts": [
+    "languages",
+    "documents"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "language",
+      "affectedContexts": [
+        {
+          "name": "languages",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "documents",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "id": "7f9ee95e-04d9-46ed-980a-c541678b20b5",
+          "required": false,
+          "dataType": "@sys.language",
+          "name": "language",
+          "value": "",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "No problem."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,36 @@
+{
+  "id": "173fe1cc-1e48-467d-b3a8-50cd2d63e2c4",
+  "name": "date.month.check",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "date.month.check",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "55461592-b29d-4d9f-9b46-99a24b6d7866",
+          "dataType": "@sys.date-period",
+          "name": "date-period",
+          "value": "$date-period"
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1504180922901,
+  "fallbackIntent": false,
+  "events": []
+}

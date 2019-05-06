@@ -1,0 +1,29 @@
+{
+  "id": "6aa314de-8b0d-4bb1-8c50-e37b8d621d89",
+  "name": "smalltalk.agent.occupation",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "smalltalk.agent.occupation",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Above the clouds, as the great Balkan poet \u0027The Beautiful One\u0027 would say."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1529436452,
+  "fallbackIntent": false,
+  "events": []
+}
