@@ -1,0 +1,193 @@
+category,category,categories,subcategory,catagory,type
+date,after,/^(.*?(\bafter\b)[^$]*)$/
+date,early,/^(.*?(\bearly\b)[^$]*)$/
+date,late,^(.*?(\blate\b)[^$]*)$
+date,between,/^(.*?(\bbetween\b)[^$]*)$/
+date,before,/^(.*?(\bbefore\b)[^$]*)$/
+date,date,"/""<? @sys-date ?>""/"
+general,mood,moods,temper,vibe,ambience,ambiance,atmosphere,sentiment,humour,spirit,humor
+general,feeling
+language,Spanish; Castilian
+language,Northern Sami
+language,Sindhi
+language,Sardinian
+language,Sanskrit
+language,Kinyarwanda
+language,Russian
+language,Romanian; Moldavian;
+language,Rundi
+language,Romansh
+language,Quechua
+language,Portuguese
+language,Pushto; Pashto
+language,Polish
+language,Pali
+language,Panjabi; Punjabi
+language,Ossetian; Ossetic
+language,Oriya
+language,Oromo
+language,Ojibwa
+language,croatian,horwatie,rvacki
+language,german
+language,Zulu
+language,Chinese
+language,Zhuang; Chuang
+language,Yoruba
+language,Yiddish
+language,Xhosa
+language,Wolof
+language,Walloon
+language,Volap�k
+language,Vietnamese
+language,Venda
+language,Uzbek
+language,Urdu
+language,Ukrainian
+language,Uighur; Uyghur
+language,Tahitian
+language,Twi
+language,Tatar
+language,Tsonga
+language,Turkish
+language,Tonga (Tonga Islands)
+language,Tswana
+language,Tagalog
+language,Turkmen
+language,Tigrinya
+language,Thai
+language,Tajik
+language,Telugu
+language,Tamil
+language,Swahili
+language,Swedish
+language,Sundanese
+language,Sotho,Southern
+language,Swati
+language,Serbian
+language,Albanian
+language,Somali
+language,Shona
+language,Samoan
+language,Slovenian
+language,Slovak
+language,Sinhala; Sinhalese
+language,Occitan (post 1500);
+language,Chichewa; Chewa; Nyanja
+language,Navajo; Navaho
+language,Norwegian
+language,Norwegian Nynorsk;
+language,Dutch; Flemish
+language,Ndonga
+language,Nepali
+language,Ndebele,South;,North; North Ndebele
+language,Bokm�l,Norwegian;
+language,Nauru
+language,Burmese
+language,Maltese
+language,Malay
+language,Marathi
+language,Mongolian
+language,Malayalam
+language,Macedonian
+language,Maori
+language,Marshallese
+language,Malagasy
+language,Latvian
+language,Luba-Katanga
+language,Lithuanian
+language,Lao
+language,Lingala
+language,Limburgan; Limburger;
+language,Ganda
+language,Luxembourgish; Letzeburgesch
+language,Latin
+language,Kirghiz; Kyrgyz
+language,Cornish
+language,Komi
+language,Kurdish
+language,Kashmiri
+language,Kanuri
+language,Korean
+language,Kannada
+language,Central Khmer
+language,Kalaallisut; Greenlandic
+language,Kazakh
+language,Kuanyama; Kwanyama
+language,Kikuyu; Gikuyu
+language,Kongo
+language,Georgian
+language,Javanese
+language,Japanese
+language,Inuktitut
+language,Italian
+language,Icelandic
+language,Ido
+language,Inupiaq
+language,Sichuan Yi; Nuosu
+language,Igbo
+language,Interlingue; Occidental
+language,Indonesian
+language,Interlingua
+language,Herero
+language,Armenian
+language,Hungarian
+language,Haitian; Haitian Creole
+language,Hiri Motu
+language,Hindi
+language,Hebrew
+language,Hausa
+language,Manx
+language,Gujarati
+language,Guarani
+language,Galician
+language,Gaelic; Scottish Gaelic
+language,Irish
+language,Western Frisian
+language,French
+language,Faroese
+language,Fijian
+language,Finnish
+language,Fulah
+language,Persian
+language,Basque
+language,Estonian
+language,Sango
+language,Esperanto
+language,English
+language,Greek,Modern (1453-)
+language,Ewe
+language,Dzongkha
+language,Divehi; Dhivehi; Maldivian
+language,Danish
+language,Welsh
+language,Chuvash
+language,Church Slavic; Old Slavonic;
+language,Czech
+language,Cree
+language,Corsican
+language,Chamorro
+language,Chechen
+language,Catalan; Valencian
+language,Bosnian
+language,Breton
+language,Tibetan
+language,Bengali
+language,Bislama
+language,Bambara
+language,Bihari languages
+language,Bulgarian
+language,Belarusian
+language,Bashkir
+language,Azerbaijani
+language,Aymara
+language,Avaric
+language,Assamese
+language,Arabic
+language,Aragonese
+language,Amharic
+language,Akan
+language,Afrikaans
+language,Avestan
+language,Abkhazian
+language,Afar
+sort,sort,kind,sorts

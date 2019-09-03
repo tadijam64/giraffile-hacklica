@@ -1,0 +1,54 @@
+{
+  "id": "99ad22f0-d14d-470c-830e-57d866c4146f",
+  "name": "date.holiday.between",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "date.holiday.between",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "cbbfe086-d6d0-41b2-8c8f-3a2e00a57994",
+          "required": false,
+          "dataType": "@holiday",
+          "name": "holiday-1",
+          "value": "$holiday-1",
+          "isList": false
+        },
+        {
+          "id": "0b969089-b3d8-44b0-988f-aac678cc6887",
+          "required": false,
+          "dataType": "@holiday",
+          "name": "holiday-2",
+          "value": "$holiday-2",
+          "isList": false
+        },
+        {
+          "id": "e5d87d9e-ed58-419a-8efd-1cf36ea59847",
+          "required": false,
+          "dataType": "@unit-time",
+          "name": "unit",
+          "value": "$unit",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1504180922828,
+  "fallbackIntent": false,
+  "events": []
+}

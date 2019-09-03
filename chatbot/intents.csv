@@ -1,0 +1,304 @@
+Can you give me document,document_info
+"Hi, I'd like to see all of my files that are in german and made after 2018",document_info
+Provide me all documents with name,document_info
+May I ask you to give me all documents,document_info
+Can you provide me document,document_info
+find by date,document_info
+find me my documents in croatian,document_info
+find me all documents in german,document_info
+Find document by title,document_info
+fond by name,document_info
+Find document by name,document_info
+Give me all documents with name,document_info
+Search,document_info
+Find,document_info
+give me,document_info
+provide me,document_info
+document,document_info
+document date,document_info
+find by name,document_info
+document name,document_info
+document title,document_info
+Why are you here?,General_About_You
+About you,General_About_You
+Can I use another language?,General_About_You
+Describe your self,General_About_You
+Do you have a name?,General_About_You
+Do you know who you are?,General_About_You
+How can I configure you?,General_About_You
+How do you function?,General_About_You
+How old are you?,General_About_You
+I want to set up the chat bot for my shop,General_About_You
+Introduce your self,General_About_You
+Let us talk about you,General_About_You
+Tell me about your life,General_About_You
+Tell me something about yourself,General_About_You
+What languages do you speak?,General_About_You
+What should I know about you?,General_About_You
+What's your name?,General_About_You
+Where are you from?,General_About_You
+Where were you born?,General_About_You
+Who are you?,General_About_You
+What are you used for?,General_Agent_Capabilities
+What are your skills?,General_Agent_Capabilities
+What can I ask you to do?,General_Agent_Capabilities
+What do you do?,General_Agent_Capabilities
+What do you handle?,General_Agent_Capabilities
+What else can you help me with?,General_Agent_Capabilities
+What features are in here?,General_Agent_Capabilities
+What is this 4?,General_Agent_Capabilities
+What kinds of things can you do?,General_Agent_Capabilities
+Where can I find the frequently asked questions?,General_Agent_Capabilities
+How do I use you?,General_Agent_Capabilities
+I do not know what to ask,General_Agent_Capabilities
+Can you please give me a list of the types of things you can help me with?,General_Agent_Capabilities
+Can you tell me what services you are able to help me with?,General_Agent_Capabilities
+Do you have a list of things I can talk to you about?,General_Agent_Capabilities
+Help now,General_Agent_Capabilities
+"Hi, what do you do?",General_Agent_Capabilities
+How can I use you?,General_Agent_Capabilities
+How can you help me?,General_Agent_Capabilities
+How can you solve my problems?,General_Agent_Capabilities
+I'd like to know what type of questions you can answer for me.,General_Agent_Capabilities
+Is there anything you can help me with?,General_Agent_Capabilities
+Tell me about what kind of things you do?,General_Agent_Capabilities
+Tell me something,General_Agent_Capabilities
+What are my options that you can help with?,General_Agent_Capabilities
+What are my options?,General_Agent_Capabilities
+What are you able to deal with?,General_Agent_Capabilities
+What are you able to understand?,General_Agent_Capabilities
+What are you capable of?,General_Agent_Capabilities
+What are you good at?,General_Agent_Capabilities
+Customer service representative please.,General_Connect_to_Agent
+Could you please transfer me to your master?,General_Connect_to_Agent
+Contact person,General_Connect_to_Agent
+Connect me to a live operator please.,General_Connect_to_Agent
+Can you assist me to connect to an agent?,General_Connect_to_Agent
+"A real agent, please.",General_Connect_to_Agent
+Agent help,General_Connect_to_Agent
+Call agent,General_Connect_to_Agent
+Can I connect to an agent?,General_Connect_to_Agent
+Can I speak to a human please?,General_Connect_to_Agent
+Can I speak to a live person?,General_Connect_to_Agent
+Can I speak to an advisor?,General_Connect_to_Agent
+Can I speak with somebody?,General_Connect_to_Agent
+Can I talk to someone?,General_Connect_to_Agent
+Can you connect me with a real person?,General_Connect_to_Agent
+Operator please,General_Connect_to_Agent
+Need help from human,General_Connect_to_Agent
+Is there anyone there I can actually talk to for real?,General_Connect_to_Agent
+I would like to speak to someone,General_Connect_to_Agent
+I would like to speak to a human,General_Connect_to_Agent
+I want to talk to a person,General_Connect_to_Agent
+I want an agent to help me,General_Connect_to_Agent
+I want agent,General_Connect_to_Agent
+I want a manager,General_Connect_to_Agent
+I need to speak to a representative. How would I go about doing so?,General_Connect_to_Agent
+I don't want to talk to you,General_Connect_to_Agent
+I don't want to talk to a bot.,General_Connect_to_Agent
+How can I skip the recorded menu and go straight to a live person?,General_Connect_to_Agent
+Hi can you transfer me,General_Connect_to_Agent
+Do not want a robot?,General_Connect_to_Agent
+Please assist me to get to an agent,General_Connect_to_Agent
+Please connect me to a live agent,General_Connect_to_Agent
+Please let me talk to a human being.,General_Connect_to_Agent
+Pls connect,General_Connect_to_Agent
+Put me through to someone,General_Connect_to_Agent
+Send me to an agent,General_Connect_to_Agent
+Where is the closest agent?,General_Connect_to_Agent
+"Yes, take me to a real person",General_Connect_to_Agent
+I d like to stop doing this,General_Ending
+Time to go,General_Ending
+That's everything,General_Ending
+That is all,General_Ending
+"Thanks very much, bye!",General_Ending
+"Thanks, bye!",General_Ending
+Thank you for your time,General_Ending
+Stop talking to me,General_Ending
+Stop doing this,General_Ending
+Shut up,General_Ending
+See you,General_Ending
+See you later,General_Ending
+Ok goodbye,General_Ending
+It was nice chatting with you,General_Ending
+I'm leaving now,General_Ending
+Im good thank you,General_Ending
+Im done,General_Ending
+I'm done,General_Ending
+I want to quit,General_Ending
+Go away,General_Ending
+Go off,General_Ending
+Bye bye,General_Ending
+Bye now,General_Ending
+Catch you later,General_Ending
+Cya later,General_Ending
+End trial,General_Ending
+Ending this session,General_Ending
+"Finished now, good bye",General_Ending
+Get lost,General_Ending
+Going now,General_Ending
+Good. bye.,General_Ending
+Goodbye,General_Ending
+Have a nice day?,General_Ending
+Hey bot go away,General_Ending
+I am leaving,General_Ending
+I am out of here,General_Ending
+I have got to go,General_Ending
+Hello,General_Greetings
+Hello Agent,General_Greetings
+Have you been well?,General_Greetings
+Greetings,General_Greetings
+Good to see you,General_Greetings
+Good morning,General_Greetings
+Good evening,General_Greetings
+Good day,General_Greetings
+You there,General_Greetings
+Who is this?,General_Greetings
+What's up?,General_Greetings
+What's new?,General_Greetings
+Ok take me back,General_Greetings
+Looking good eve,General_Greetings
+How r u?,General_Greetings
+How is it going?,General_Greetings
+How have you been?,General_Greetings
+How are you today?,General_Greetings
+How are things going?,General_Greetings
+Hi there,General_Greetings
+Hi advisor,General_Greetings
+Hey you,General_Greetings
+Hey twin,General_Greetings
+Hey there,General_Greetings
+Hey there all,General_Greetings
+Hey how are you doing,General_Greetings
+Hello I am looking for some help here,General_Greetings
+Is this a computer?,General_Human_or_Bot
+"Tell me, are you a human or no?",General_Human_or_Bot
+Am I talking to a Bot?,General_Human_or_Bot
+Am I talking to a person or am I talking to an AI?,General_Human_or_Bot
+Am I talking to Watson?,General_Human_or_Bot
+Am I chatting with a human?,General_Human_or_Bot
+Are you a human or a bot?,General_Human_or_Bot
+Are you a robot?,General_Human_or_Bot
+Are you even real?,General_Human_or_Bot
+Are you human?,General_Human_or_Bot
+Are you real?,General_Human_or_Bot
+How can you prove you are a human?,General_Human_or_Bot
+Do you have humor?,General_Jokes
+Do you like fun?,General_Jokes
+Do you like humor?,General_Jokes
+I am getting bored,General_Jokes
+I want a joke,General_Jokes
+I'm bored,General_Jokes
+Surprise me with something hilarious,General_Jokes
+Tell me a joke,General_Jokes
+Tell me something funny,General_Jokes
+What do you do for fun?,General_Jokes
+What is your favorite joke?,General_Jokes
+One more joke,General_Jokes
+Another joke,General_Jokes
+Are there jokes?,General_Jokes
+Can you tell a joke?,General_Jokes
+Can you tell me a joke?,General_Jokes
+Do you have a joke?,General_Jokes
+Hate you,General_Negative_Feedback
+I do not like you,General_Negative_Feedback
+I hate you,General_Negative_Feedback
+I hate this!,General_Negative_Feedback
+It is annoying,General_Negative_Feedback
+Quit annoying me,General_Negative_Feedback
+Robots are boring,General_Negative_Feedback
+Robots are stupid,General_Negative_Feedback
+Stupid,General_Negative_Feedback
+Why are you so annoying?,General_Negative_Feedback
+Why are you stupid?,General_Negative_Feedback
+You are having delusions,General_Negative_Feedback
+You are on my nerves,General_Negative_Feedback
+You are very frustrating,General_Negative_Feedback
+You do not seem smart,General_Negative_Feedback
+You're really frustrating,General_Negative_Feedback
+You're really irritating,General_Negative_Feedback
+You're too stupid,General_Negative_Feedback
+Do not like you?,General_Negative_Feedback
+Everyone hates you,General_Negative_Feedback
+You are the best,General_Positive_Feedback
+You've been so helpful :),General_Positive_Feedback
+You're a genius!,General_Positive_Feedback
+You the man,General_Positive_Feedback
+You gave me exactly what I need!,General_Positive_Feedback
+You are wonderful,General_Positive_Feedback
+Brilliant!,General_Positive_Feedback
+Can't believe you are that good,General_Positive_Feedback
+How cool is this?,General_Positive_Feedback
+I like what you did there! :),General_Positive_Feedback
+I'm looking forward to working with you again! :),General_Positive_Feedback
+Love your work,General_Positive_Feedback
+Ok thank you,General_Positive_Feedback
+Thank you,General_Positive_Feedback
+This is good,General_Positive_Feedback
+This is great,General_Positive_Feedback
+This is so cool,General_Positive_Feedback
+You are awesome,General_Positive_Feedback
+You are great,General_Positive_Feedback
+What guards do you have in place to protect your customer's data?,General_Security_Assurance
+Secure conversation?,General_Security_Assurance
+Protection hacks?,General_Security_Assurance
+Precautions hackers?,General_Security_Assurance
+Is this conversation secure?,General_Security_Assurance
+Is this an official chat?,General_Security_Assurance
+Is this a trusted chat site?,General_Security_Assurance
+Is there a reason to distrust this chat?,General_Security_Assurance
+Is my payment information secure?,General_Security_Assurance
+Is my card info secure?,General_Security_Assurance
+In what way can I tell if my plastic is safe?,General_Security_Assurance
+I'd like proof of a secure chat,General_Security_Assurance
+How safe is my data?,General_Security_Assurance
+How is my credit card info secured?,General_Security_Assurance
+How do I know this chat is not a scam?,General_Security_Assurance
+How do I know if my card info is kept safe?,General_Security_Assurance
+Do you have protection against hacks?,General_Security_Assurance
+Customer info secured?,General_Security_Assurance
+Conversation secure?,General_Security_Assurance
+Can I be sure that my stored card details are held securely?,General_Security_Assurance
+Are you safe?,General_Security_Assurance
+Are you safe on hackers?,General_Security_Assurance
+Will my conversation remain secured?,General_Security_Assurance
+Why would I trust this chat?,General_Security_Assurance
+What safety measures are used to ensure that chat is secure?,General_Security_Assurance
+What makes this chat trustworthy?,General_Security_Assurance
+cya,goodbyes
+I'm leaving,goodbyes
+bok,goodbyes
+quit,goodbyes
+exit,goodbyes
+stop,goodbyes
+aj bok,goodbyes
+good bye,goodbyes
+later,goodbyes
+bye now,goodbyes
+bye,goodbyes
+have a nice day,goodbyes
+we are done,goodbyes
+see you,goodbyes
+adieu,goodbyes
+farewell,goodbyes
+g'day,greetings
+yo,greetings
+good evening,greetings
+good morning,greetings
+hey,greetings
+hi,greetings
+hello,greetings
+sup,greetings
+what's up?,greetings
+howdy,greetings
+greetings,greetings
+good day,greetings
+alright,thank_you
+cheers,thank_you
+I owe you one,thank_you
+much obliged,thank_you
+"alright, thanks",thank_you
+thank you very much,thank_you
+thank you,thank_you
+Thanks a bunch,thank_you
+thanks,thank_you

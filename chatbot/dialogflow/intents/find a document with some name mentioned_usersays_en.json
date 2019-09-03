@@ -1,0 +1,69 @@
+[
+  {
+    "id": "0cb5672d-972f-47c0-b6fa-79ffa8922b85",
+    "data": [
+      {
+        "text": "find a document with some name mentioned",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1
+  },
+  {
+    "id": "88ddcef7-104e-4bbe-a2da-cc0bc8523bb1",
+    "data": [
+      {
+        "text": "can you find me documents ",
+        "userDefined": false
+      },
+      {
+        "text": "between 2016 and 2019",
+        "alias": "date-period",
+        "meta": "@sys.date-period",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "ce7afe01-88eb-4192-bbed-fe78c0f4bf31",
+    "data": [
+      {
+        "text": "Find",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "5c21c0f7-c031-4098-8b00-6bf2308d627b",
+    "data": [
+      {
+        "text": "Search",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "5cd2805a-3e7d-41fb-868e-05d438a3effe",
+    "data": [
+      {
+        "text": "find me my documents in ",
+        "userDefined": false
+      },
+      {
+        "text": "croatian",
+        "alias": "geo-country",
+        "meta": "@sys.geo-country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "id": "0433a0ce-44dd-425e-b4ba-d199d7f1cbd8",
+  "name": "smalltalk.agent.crazy",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "smalltalk.agent.crazy",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Hey, you\u0027re the one talking to a document-chewing giraffe. Ain\u0027t the one to judge."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1529427207,
+  "fallbackIntent": false,
+  "events": []
+}

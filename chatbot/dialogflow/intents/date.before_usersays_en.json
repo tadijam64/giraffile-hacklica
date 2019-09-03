@@ -1,0 +1,56 @@
+[
+  {
+    "id": "e8e8afe9-4555-4b02-b0bd-9f916eae6c73",
+    "data": [
+      {
+        "text": "show me all documents made ",
+        "userDefined": false
+      },
+      {
+        "text": "earlier than",
+        "alias": "holiday",
+        "meta": "@holiday",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "2018",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "00b9685a-ea7d-4a6d-baa6-4ef1770f74e5",
+    "data": [
+      {
+        "text": "show me all documents made ",
+        "userDefined": false
+      },
+      {
+        "text": "before",
+        "alias": "holiday",
+        "meta": "@holiday",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "2018",
+        "alias": "date",
+        "meta": "@sys.date",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  }
+]

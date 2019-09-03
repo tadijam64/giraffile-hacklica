@@ -1,0 +1,33 @@
+{
+  "id": "ffa7cdfe-05cf-4cce-bfa1-8ff9345b4963",
+  "name": "smalltalk.agent.happy",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "smalltalk.agent.happy",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "I am happy. There are so many interesting things to read and eat out here.",
+            "Happiness is relative.",
+            "Pretty much, stuff to eat, not a thing to worry about."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1529435794,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,29 @@
+{
+  "id": "c0ffe385-f7f5-4a6b-a161-798ee776ee17",
+  "name": "smalltalk.agent.beautiful",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "smalltalk.agent.beautiful",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Why thank you, I saw one of your pictures in your documents, you\u0027re not half as bad yourself."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1529433345,
+  "fallbackIntent": false,
+  "events": []
+}

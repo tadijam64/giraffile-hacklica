@@ -1,0 +1,579 @@
+[
+  {
+    "id": "d5c34f9e-08d1-4019-89ec-cd29c61f9ceb",
+    "data": [
+      {
+        "text": "find me all of my financial records from ",
+        "userDefined": false
+      },
+      {
+        "text": "between august 2017 and july 2019",
+        "alias": "date-period",
+        "meta": "@sys.date-period",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 4,
+    "updated": 0
+  },
+  {
+    "id": "49ec64e4-a3b8-401d-8e82-800570ce8cf6",
+    "data": [
+      {
+        "text": "find me all of my financial records between ",
+        "userDefined": false
+      },
+      {
+        "text": "2017 and 2019",
+        "alias": "date-period",
+        "meta": "@sys.date-period",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 2,
+    "updated": 0
+  },
+  {
+    "id": "3d10e821-9933-4be6-822d-61d18f2d545c",
+    "data": [
+      {
+        "text": "find me all of my financial records between ",
+        "userDefined": false
+      },
+      {
+        "text": "January 2015 and 2019",
+        "alias": "date-period",
+        "meta": "@sys.date-period",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 2,
+    "updated": 0
+  },
+  {
+    "id": "6ba2c60f-8de8-4fac-8c7b-e6781accfc12",
+    "data": [
+      {
+        "text": "find me all of my documents from ",
+        "userDefined": false
+      },
+      {
+        "text": "between May 2014 and July 2015",
+        "alias": "date-period",
+        "meta": "@sys.date-period",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 4,
+    "updated": 0
+  },
+  {
+    "id": "ab778d29-7702-4c47-8ed1-c4bda23cae1f",
+    "data": [
+      {
+        "text": "get my my documents between ",
+        "userDefined": false
+      },
+      {
+        "text": "2015 and 2019",
+        "alias": "date-period",
+        "meta": "@sys.date-period",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 2,
+    "updated": 0
+  },
+  {
+    "id": "d7d6f43e-aec4-4565-993b-0d6ed65791c2",
+    "data": [
+      {
+        "text": "search for documents made ",
+        "userDefined": false
+      },
+      {
+        "text": "earlier than",
+        "alias": "date-1",
+        "meta": "@sys.date",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "2018",
+        "alias": "date-2",
+        "meta": "@sys.date",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "586d6c56-5296-427c-aa27-8ef01e54232c",
+    "data": [
+      {
+        "text": "find documents ",
+        "userDefined": false
+      },
+      {
+        "text": "earlier than",
+        "alias": "date-1",
+        "meta": "@sys.date",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "2016",
+        "alias": "date-2",
+        "meta": "@sys.date",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 3,
+    "updated": 0
+  },
+  {
+    "id": "7d94593f-fb39-46f4-9950-ac78e0c0a8b2",
+    "data": [
+      {
+        "text": "my documents from ",
+        "userDefined": false
+      },
+      {
+        "text": "between 2015 and 2019",
+        "alias": "date-period",
+        "meta": "@sys.date-period",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "8927092b-7a18-4f77-9021-1df971f7ac2d",
+    "data": [
+      {
+        "text": "find me all of my financial records between ",
+        "userDefined": false
+      },
+      {
+        "text": "August 2017 and 2019",
+        "alias": "date-period",
+        "meta": "@sys.date-period",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "ed9342e5-88d8-4bcb-b3c4-9bf04f3dd60a",
+    "data": [
+      {
+        "text": "find me all of my financial records between ",
+        "userDefined": false
+      },
+      {
+        "text": "August 2017 and July 2019",
+        "alias": "date-period",
+        "meta": "@sys.date-period",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "40ca6cfc-5d38-4285-8a56-adc249fcc58e",
+    "data": [
+      {
+        "text": "how many ",
+        "userDefined": false
+      },
+      {
+        "text": "days",
+        "alias": "unit",
+        "meta": "@unit-time",
+        "userDefined": true
+      },
+      {
+        "text": " are between ",
+        "userDefined": false
+      },
+      {
+        "text": "November 13",
+        "alias": "date-1",
+        "meta": "@sys.date",
+        "userDefined": true
+      },
+      {
+        "text": " and ",
+        "userDefined": false
+      },
+      {
+        "text": "July 22",
+        "alias": "date-2",
+        "meta": "@sys.date",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e3aa7910-6938-4fb1-b4ab-0c5c24997911",
+    "data": [
+      {
+        "text": "calculate the number of ",
+        "userDefined": false
+      },
+      {
+        "text": "minutes",
+        "alias": "unit",
+        "meta": "@unit-time",
+        "userDefined": true
+      },
+      {
+        "text": " between ",
+        "userDefined": false
+      },
+      {
+        "text": "today",
+        "alias": "date-1",
+        "meta": "@sys.date",
+        "userDefined": true
+      },
+      {
+        "text": " and ",
+        "userDefined": false
+      },
+      {
+        "text": "Wednesday",
+        "alias": "date-2",
+        "meta": "@sys.date",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "08b555b3-3cfd-4a93-bbd6-11b6d88cadfd",
+    "data": [
+      {
+        "text": "compute the number of ",
+        "userDefined": false
+      },
+      {
+        "text": "seconds",
+        "alias": "unit",
+        "meta": "@unit-time",
+        "userDefined": true
+      },
+      {
+        "text": " between ",
+        "userDefined": false
+      },
+      {
+        "text": "today",
+        "alias": "date-1",
+        "meta": "@sys.date",
+        "userDefined": true
+      },
+      {
+        "text": " and ",
+        "userDefined": false
+      },
+      {
+        "text": "March 7 2017",
+        "alias": "date-2",
+        "meta": "@sys.date",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "06ee5ecd-f057-4d4c-a803-08fee66347db",
+    "data": [
+      {
+        "text": "tell me the number of ",
+        "userDefined": false
+      },
+      {
+        "text": "weeks",
+        "alias": "unit",
+        "meta": "@unit-time",
+        "userDefined": true
+      },
+      {
+        "text": " between ",
+        "userDefined": false
+      },
+      {
+        "text": "today",
+        "alias": "date-1",
+        "meta": "@sys.date",
+        "userDefined": true
+      },
+      {
+        "text": " and ",
+        "userDefined": false
+      },
+      {
+        "text": "January 1st",
+        "alias": "date-2",
+        "meta": "@sys.date",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "68cc2ef1-fbc7-4587-a20f-f5ac8c0ecc0d",
+    "data": [
+      {
+        "text": "I need to know the number of ",
+        "userDefined": false
+      },
+      {
+        "text": "days",
+        "alias": "unit",
+        "meta": "@unit-time",
+        "userDefined": true
+      },
+      {
+        "text": " between ",
+        "userDefined": false
+      },
+      {
+        "text": "today",
+        "alias": "date-1",
+        "meta": "@sys.date",
+        "userDefined": true
+      },
+      {
+        "text": " and the ",
+        "userDefined": false
+      },
+      {
+        "text": "next Friday",
+        "alias": "date-2",
+        "meta": "@sys.date",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "9cec074a-aa0c-423c-b66b-754875750b45",
+    "data": [
+      {
+        "text": "count the number of ",
+        "userDefined": false
+      },
+      {
+        "text": "hours",
+        "alias": "unit",
+        "meta": "@unit-time",
+        "userDefined": true
+      },
+      {
+        "text": " between ",
+        "userDefined": false
+      },
+      {
+        "text": "June 5",
+        "alias": "date-1",
+        "meta": "@sys.date",
+        "userDefined": true
+      },
+      {
+        "text": " and ",
+        "userDefined": false
+      },
+      {
+        "text": "June 14",
+        "alias": "date-2",
+        "meta": "@sys.date",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "abe7929d-17cb-4bbb-82ae-54fc9b927118",
+    "data": [
+      {
+        "text": "number of ",
+        "userDefined": false
+      },
+      {
+        "text": "seconds",
+        "alias": "unit",
+        "meta": "@unit-time",
+        "userDefined": true
+      },
+      {
+        "text": " between ",
+        "userDefined": false
+      },
+      {
+        "text": "today",
+        "alias": "date-1",
+        "meta": "@sys.date",
+        "userDefined": true
+      },
+      {
+        "text": " and ",
+        "userDefined": false
+      },
+      {
+        "text": "April 1st",
+        "alias": "date-2",
+        "meta": "@sys.date",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "7c1141c3-7c2c-4c01-a5cc-7aad95d50d56",
+    "data": [
+      {
+        "text": "what is the number of ",
+        "userDefined": false
+      },
+      {
+        "text": "years",
+        "alias": "unit",
+        "meta": "@unit-time",
+        "userDefined": true
+      },
+      {
+        "text": " between ",
+        "userDefined": false
+      },
+      {
+        "text": "2017",
+        "alias": "date-1",
+        "meta": "@sys.date",
+        "userDefined": true
+      },
+      {
+        "text": " and ",
+        "userDefined": false
+      },
+      {
+        "text": "2048",
+        "alias": "date-2",
+        "meta": "@sys.date",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ffe30e13-16fe-4131-affe-8e310bd3c668",
+    "data": [
+      {
+        "text": "evaluate how many ",
+        "userDefined": false
+      },
+      {
+        "text": "days",
+        "alias": "unit",
+        "meta": "@unit-time",
+        "userDefined": true
+      },
+      {
+        "text": " are between ",
+        "userDefined": false
+      },
+      {
+        "text": "today",
+        "alias": "date-1",
+        "meta": "@sys.date",
+        "userDefined": true
+      },
+      {
+        "text": " and ",
+        "userDefined": false
+      },
+      {
+        "text": "February 14 2018",
+        "alias": "date-2",
+        "meta": "@sys.date",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "fdd92d86-b36f-457b-8299-56508c5d0fe0",
+    "data": [
+      {
+        "text": "how many ",
+        "userDefined": false
+      },
+      {
+        "text": "months",
+        "alias": "unit",
+        "meta": "@unit-time",
+        "userDefined": true
+      },
+      {
+        "text": " are there between ",
+        "userDefined": false
+      },
+      {
+        "text": "January 2013",
+        "alias": "date-1",
+        "meta": "@sys.date",
+        "userDefined": true
+      },
+      {
+        "text": " and ",
+        "userDefined": false
+      },
+      {
+        "text": "August 2017",
+        "alias": "date-2",
+        "meta": "@sys.date",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

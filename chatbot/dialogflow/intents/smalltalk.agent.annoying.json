@@ -1,0 +1,32 @@
+{
+  "id": "3dbe65c6-07ae-437d-9987-4d2a8e99911b",
+  "name": "smalltalk.agent.annoying",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "smalltalk.agent.annoying",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "Your lame docs are annoying, doesn\u0027t stop me from helping you.",
+            "Hey, I\u0027m not real, but your bad feelings are. Food for thought."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1529077963,
+  "fallbackIntent": false,
+  "events": []
+}

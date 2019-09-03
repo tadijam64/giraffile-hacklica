@@ -1,0 +1,9 @@
+{
+  "id": "95443546-7568-4b89-86dd-04a4c663deb2",
+  "name": "document",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": true,
+  "allowFuzzyExtraction": false
+}

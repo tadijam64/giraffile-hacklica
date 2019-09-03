@@ -1,0 +1,2565 @@
+{
+  "name": "Giraffile Chatbot",
+  "intents": [
+    {
+      "intent": "greetings",
+      "examples": [
+        {
+          "text": "good evening"
+        },
+        {
+          "text": "yo"
+        },
+        {
+          "text": "good morning"
+        },
+        {
+          "text": "hey"
+        },
+        {
+          "text": "hi"
+        },
+        {
+          "text": "hello"
+        },
+        {
+          "text": "sup"
+        },
+        {
+          "text": "what's up?"
+        },
+        {
+          "text": "g'day"
+        },
+        {
+          "text": "good day"
+        },
+        {
+          "text": "greetings"
+        },
+        {
+          "text": "howdy"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "General_Positive_Feedback",
+      "examples": [
+        {
+          "text": "Ok thank you"
+        },
+        {
+          "text": "Love your work"
+        },
+        {
+          "text": "I'm looking forward to working with you again! :)"
+        },
+        {
+          "text": "I like what you did there! :)"
+        },
+        {
+          "text": "How cool is this?"
+        },
+        {
+          "text": "Can't believe you are that good"
+        },
+        {
+          "text": "Brilliant!"
+        },
+        {
+          "text": "This is great"
+        },
+        {
+          "text": "You've been so helpful :)"
+        },
+        {
+          "text": "You're a genius!"
+        },
+        {
+          "text": "You the man"
+        },
+        {
+          "text": "You gave me exactly what I need!"
+        },
+        {
+          "text": "You are wonderful"
+        },
+        {
+          "text": "You are the best"
+        },
+        {
+          "text": "You are great"
+        },
+        {
+          "text": "You are awesome"
+        },
+        {
+          "text": "This is so cool"
+        },
+        {
+          "text": "This is good"
+        },
+        {
+          "text": "Thank you"
+        }
+      ],
+      "description": "Express positive sentiment or gratitude."
+    },
+    {
+      "intent": "goodbyes",
+      "examples": [
+        {
+          "text": "I'm leaving"
+        },
+        {
+          "text": "quit"
+        },
+        {
+          "text": "exit"
+        },
+        {
+          "text": "stop"
+        },
+        {
+          "text": "cya"
+        },
+        {
+          "text": "bok"
+        },
+        {
+          "text": "aj bok"
+        },
+        {
+          "text": "good bye"
+        },
+        {
+          "text": "later"
+        },
+        {
+          "text": "bye now"
+        },
+        {
+          "text": "bye"
+        },
+        {
+          "text": "have a nice day"
+        },
+        {
+          "text": "we are done"
+        },
+        {
+          "text": "see you"
+        },
+        {
+          "text": "adieu"
+        },
+        {
+          "text": "farewell"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "General_Connect_to_Agent",
+      "examples": [
+        {
+          "text": "I would like to speak to a human"
+        },
+        {
+          "text": "Yes, take me to a real person"
+        },
+        {
+          "text": "Where is the closest agent?"
+        },
+        {
+          "text": "Send me to an agent"
+        },
+        {
+          "text": "Put me through to someone"
+        },
+        {
+          "text": "Pls connect"
+        },
+        {
+          "text": "Please let me talk to a human being."
+        },
+        {
+          "text": "Please connect me to a live agent"
+        },
+        {
+          "text": "Please assist me to get to an agent"
+        },
+        {
+          "text": "Operator please"
+        },
+        {
+          "text": "Need help from human"
+        },
+        {
+          "text": "Is there anyone there I can actually talk to for real?"
+        },
+        {
+          "text": "A real agent, please."
+        },
+        {
+          "text": "Agent help"
+        },
+        {
+          "text": "Call agent"
+        },
+        {
+          "text": "Can I connect to an agent?"
+        },
+        {
+          "text": "Can I speak to a human please?"
+        },
+        {
+          "text": "Can I speak to a live person?"
+        },
+        {
+          "text": "Can I speak to an advisor?"
+        },
+        {
+          "text": "Can I speak with somebody?"
+        },
+        {
+          "text": "Can I talk to someone?"
+        },
+        {
+          "text": "Can you assist me to connect to an agent?"
+        },
+        {
+          "text": "Can you connect me with a real person?"
+        },
+        {
+          "text": "Connect me to a live operator please."
+        },
+        {
+          "text": "Contact person"
+        },
+        {
+          "text": "Could you please transfer me to your master?"
+        },
+        {
+          "text": "Customer service representative please."
+        },
+        {
+          "text": "Do not want a robot?"
+        },
+        {
+          "text": "Hi can you transfer me"
+        },
+        {
+          "text": "How can I skip the recorded menu and go straight to a live person?"
+        },
+        {
+          "text": "I don't want to talk to a bot."
+        },
+        {
+          "text": "I don't want to talk to you"
+        },
+        {
+          "text": "I need to speak to a representative. How would I go about doing so?"
+        },
+        {
+          "text": "I want a manager"
+        },
+        {
+          "text": "I want agent"
+        },
+        {
+          "text": "I want an agent to help me"
+        },
+        {
+          "text": "I want to talk to a person"
+        },
+        {
+          "text": "I would like to speak to someone"
+        }
+      ],
+      "description": "Request a human agent."
+    },
+    {
+      "intent": "General_Human_or_Bot",
+      "examples": [
+        {
+          "text": "Is this a computer?"
+        },
+        {
+          "text": "How can you prove you are a human?"
+        },
+        {
+          "text": "Are you real?"
+        },
+        {
+          "text": "Are you human?"
+        },
+        {
+          "text": "Are you even real?"
+        },
+        {
+          "text": "Are you a robot?"
+        },
+        {
+          "text": "Are you a human or a bot?"
+        },
+        {
+          "text": "Am I talking to a person or am I talking to an AI?"
+        },
+        {
+          "text": "Am I talking to a Bot?"
+        },
+        {
+          "text": "Am I talking to Watson?"
+        },
+        {
+          "text": "Am I chatting with a human?"
+        },
+        {
+          "text": "Tell me, are you a human or no?"
+        }
+      ],
+      "description": "Ask if speaking to a human or a bot."
+    },
+    {
+      "intent": "General_Ending",
+      "examples": [
+        {
+          "text": "Time to go"
+        },
+        {
+          "text": "That's everything"
+        },
+        {
+          "text": "That is all"
+        },
+        {
+          "text": "Thanks very much, bye!"
+        },
+        {
+          "text": "Thanks, bye!"
+        },
+        {
+          "text": "Thank you for your time"
+        },
+        {
+          "text": "Stop talking to me"
+        },
+        {
+          "text": "Stop doing this"
+        },
+        {
+          "text": "Shut up"
+        },
+        {
+          "text": "See you"
+        },
+        {
+          "text": "See you later"
+        },
+        {
+          "text": "Ok goodbye"
+        },
+        {
+          "text": "It was nice chatting with you"
+        },
+        {
+          "text": "I'm leaving now"
+        },
+        {
+          "text": "Im good thank you"
+        },
+        {
+          "text": "Im done"
+        },
+        {
+          "text": "I'm done"
+        },
+        {
+          "text": "I want to quit"
+        },
+        {
+          "text": "I have got to go"
+        },
+        {
+          "text": "I d like to stop doing this"
+        },
+        {
+          "text": "I am out of here"
+        },
+        {
+          "text": "I am leaving"
+        },
+        {
+          "text": "Hey bot go away"
+        },
+        {
+          "text": "Have a nice day?"
+        },
+        {
+          "text": "Good. bye."
+        },
+        {
+          "text": "Goodbye"
+        },
+        {
+          "text": "Going now"
+        },
+        {
+          "text": "Get lost"
+        },
+        {
+          "text": "Finished now, good bye"
+        },
+        {
+          "text": "Ending this session"
+        },
+        {
+          "text": "End trial"
+        },
+        {
+          "text": "Cya later"
+        },
+        {
+          "text": "Catch you later"
+        },
+        {
+          "text": "Bye now"
+        },
+        {
+          "text": "Bye bye"
+        },
+        {
+          "text": "Go off"
+        },
+        {
+          "text": "Go away"
+        }
+      ],
+      "description": "End the conversation."
+    },
+    {
+      "intent": "General_Jokes",
+      "examples": [
+        {
+          "text": "Do you have humor?"
+        },
+        {
+          "text": "Another joke"
+        },
+        {
+          "text": "Are there jokes?"
+        },
+        {
+          "text": "Can you tell a joke?"
+        },
+        {
+          "text": "Can you tell me a joke?"
+        },
+        {
+          "text": "Do you have a joke?"
+        },
+        {
+          "text": "Do you like fun?"
+        },
+        {
+          "text": "Do you like humor?"
+        },
+        {
+          "text": "I am getting bored"
+        },
+        {
+          "text": "I want a joke"
+        },
+        {
+          "text": "I'm bored"
+        },
+        {
+          "text": "One more joke"
+        },
+        {
+          "text": "Surprise me with something hilarious"
+        },
+        {
+          "text": "Tell me a joke"
+        },
+        {
+          "text": "Tell me something funny"
+        },
+        {
+          "text": "What do you do for fun?"
+        },
+        {
+          "text": "What is your favorite joke?"
+        }
+      ],
+      "description": "Request a joke."
+    },
+    {
+      "intent": "General_Negative_Feedback",
+      "examples": [
+        {
+          "text": "It is annoying"
+        },
+        {
+          "text": "Quit annoying me"
+        },
+        {
+          "text": "Robots are boring"
+        },
+        {
+          "text": "Robots are stupid"
+        },
+        {
+          "text": "Stupid"
+        },
+        {
+          "text": "Why are you so annoying?"
+        },
+        {
+          "text": "Why are you stupid?"
+        },
+        {
+          "text": "You are having delusions"
+        },
+        {
+          "text": "You are on my nerves"
+        },
+        {
+          "text": "You are very frustrating"
+        },
+        {
+          "text": "You do not seem smart"
+        },
+        {
+          "text": "You're too stupid"
+        },
+        {
+          "text": "You're really irritating"
+        },
+        {
+          "text": "You're really frustrating"
+        },
+        {
+          "text": "Do not like you?"
+        },
+        {
+          "text": "Everyone hates you"
+        },
+        {
+          "text": "Hate you"
+        },
+        {
+          "text": "I do not like you"
+        },
+        {
+          "text": "I hate this!"
+        },
+        {
+          "text": "I hate you"
+        }
+      ],
+      "description": "Express unfavorable feedback."
+    },
+    {
+      "intent": "General_Security_Assurance",
+      "examples": [
+        {
+          "text": "In what way can I tell if my plastic is safe?"
+        },
+        {
+          "text": "How safe is my data?"
+        },
+        {
+          "text": "How is my credit card info secured?"
+        },
+        {
+          "text": "How do I know this chat is not a scam?"
+        },
+        {
+          "text": "How do I know if my card info is kept safe?"
+        },
+        {
+          "text": "Do you have protection against hacks?"
+        },
+        {
+          "text": "Customer info secured?"
+        },
+        {
+          "text": "Conversation secure?"
+        },
+        {
+          "text": "Can I be sure that my stored card details are held securely?"
+        },
+        {
+          "text": "Are you safe?"
+        },
+        {
+          "text": "Are you safe on hackers?"
+        },
+        {
+          "text": "Will my conversation remain secured?"
+        },
+        {
+          "text": "Why would I trust this chat?"
+        },
+        {
+          "text": "What safety measures are used to ensure that chat is secure?"
+        },
+        {
+          "text": "What makes this chat trustworthy?"
+        },
+        {
+          "text": "What guards do you have in place to protect your customer's data?"
+        },
+        {
+          "text": "Secure conversation?"
+        },
+        {
+          "text": "Protection hacks?"
+        },
+        {
+          "text": "Precautions hackers?"
+        },
+        {
+          "text": "Is this conversation secure?"
+        },
+        {
+          "text": "Is this an official chat?"
+        },
+        {
+          "text": "Is this a trusted chat site?"
+        },
+        {
+          "text": "Is there a reason to distrust this chat?"
+        },
+        {
+          "text": "Is my payment information secure?"
+        },
+        {
+          "text": "Is my card info secure?"
+        },
+        {
+          "text": "I'd like proof of a secure chat"
+        }
+      ],
+      "description": "Express concerns about the security of the bot."
+    },
+    {
+      "intent": "General_About_You",
+      "examples": [
+        {
+          "text": "Where were you born?"
+        },
+        {
+          "text": "Who are you?"
+        },
+        {
+          "text": "Why are you here?"
+        },
+        {
+          "text": "Can I use another language?"
+        },
+        {
+          "text": "About you"
+        },
+        {
+          "text": "Describe your self"
+        },
+        {
+          "text": "Do you have a name?"
+        },
+        {
+          "text": "Do you know who you are?"
+        },
+        {
+          "text": "How can I configure you?"
+        },
+        {
+          "text": "How do you function?"
+        },
+        {
+          "text": "How old are you?"
+        },
+        {
+          "text": "I want to set up the chat bot for my shop"
+        },
+        {
+          "text": "Introduce your self"
+        },
+        {
+          "text": "Let us talk about you"
+        },
+        {
+          "text": "Tell me about your life"
+        },
+        {
+          "text": "Tell me something about yourself"
+        },
+        {
+          "text": "What languages do you speak?"
+        },
+        {
+          "text": "What should I know about you?"
+        },
+        {
+          "text": "What's your name?"
+        },
+        {
+          "text": "Where are you from?"
+        }
+      ],
+      "description": "Request generic personal attributes."
+    },
+    {
+      "intent": "document_info",
+      "examples": [
+        {
+          "text": "provide me"
+        },
+        {
+          "text": "Find document by title"
+        },
+        {
+          "text": "find me all documents in german",
+          "mentions": [
+            {
+              "entity": "language",
+              "location": [
+                25,
+                31
+              ]
+            }
+          ]
+        },
+        {
+          "text": "fond by name"
+        },
+        {
+          "text": "Find document by name"
+        },
+        {
+          "text": "Give me all documents with name"
+        },
+        {
+          "text": "Search"
+        },
+        {
+          "text": "Find"
+        },
+        {
+          "text": "give me"
+        },
+        {
+          "text": "document"
+        },
+        {
+          "text": "document date"
+        },
+        {
+          "text": "find by name"
+        },
+        {
+          "text": "document name"
+        },
+        {
+          "text": "document title"
+        },
+        {
+          "text": "Can you give me document"
+        },
+        {
+          "text": "Hi, I'd like to see all of my files that are in german and made after 2018"
+        },
+        {
+          "text": "Provide me all documents with name"
+        },
+        {
+          "text": "May I ask you to give me all documents"
+        },
+        {
+          "text": "Can you provide me document"
+        },
+        {
+          "text": "find by date"
+        },
+        {
+          "text": "find me my documents in croatian",
+          "mentions": [
+            {
+              "entity": "language",
+              "location": [
+                24,
+                32
+              ]
+            }
+          ]
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "thank_you",
+      "examples": [
+        {
+          "text": "alright"
+        },
+        {
+          "text": "thanks"
+        },
+        {
+          "text": "cheers"
+        },
+        {
+          "text": "I owe you one"
+        },
+        {
+          "text": "much obliged"
+        },
+        {
+          "text": "alright, thanks"
+        },
+        {
+          "text": "Thanks a bunch"
+        },
+        {
+          "text": "thank you"
+        },
+        {
+          "text": "thank you very much"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "General_Greetings",
+      "examples": [
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hello I am looking for some help here"
+        },
+        {
+          "text": "Hello Agent"
+        },
+        {
+          "text": "Have you been well?"
+        },
+        {
+          "text": "Greetings"
+        },
+        {
+          "text": "Good to see you"
+        },
+        {
+          "text": "Good morning"
+        },
+        {
+          "text": "How are you today?"
+        },
+        {
+          "text": "Good day"
+        },
+        {
+          "text": "Good evening"
+        },
+        {
+          "text": "How are things going?"
+        },
+        {
+          "text": "Hi there"
+        },
+        {
+          "text": "Hi advisor"
+        },
+        {
+          "text": "Hey you"
+        },
+        {
+          "text": "Hey twin"
+        },
+        {
+          "text": "Hey there"
+        },
+        {
+          "text": "Hey there all"
+        },
+        {
+          "text": "Hey how are you doing"
+        },
+        {
+          "text": "You there"
+        },
+        {
+          "text": "Who is this?"
+        },
+        {
+          "text": "What's up?"
+        },
+        {
+          "text": "What's new?"
+        },
+        {
+          "text": "Ok take me back"
+        },
+        {
+          "text": "Looking good eve"
+        },
+        {
+          "text": "How r u?"
+        },
+        {
+          "text": "How is it going?"
+        },
+        {
+          "text": "How have you been?"
+        }
+      ],
+      "description": "Greet the bot."
+    },
+    {
+      "intent": "General_Agent_Capabilities",
+      "examples": [
+        {
+          "text": "What are you able to understand?"
+        },
+        {
+          "text": "What are you able to deal with?"
+        },
+        {
+          "text": "What are my options?"
+        },
+        {
+          "text": "What are my options that you can help with?"
+        },
+        {
+          "text": "Can you tell me what services you are able to help me with?"
+        },
+        {
+          "text": "Do you have a list of things I can talk to you about?"
+        },
+        {
+          "text": "Help now"
+        },
+        {
+          "text": "Hi, what do you do?"
+        },
+        {
+          "text": "How can I use you?"
+        },
+        {
+          "text": "How can you help me?"
+        },
+        {
+          "text": "What features are in here?"
+        },
+        {
+          "text": "What is this 4?"
+        },
+        {
+          "text": "What kinds of things can you do?"
+        },
+        {
+          "text": "How can you solve my problems?"
+        },
+        {
+          "text": "Where can I find the frequently asked questions?"
+        },
+        {
+          "text": "Tell me about what kind of things you do?"
+        },
+        {
+          "text": "Is there anything you can help me with?"
+        },
+        {
+          "text": "Can you please give me a list of the types of things you can help me with?"
+        },
+        {
+          "text": "I do not know what to ask"
+        },
+        {
+          "text": "I'd like to know what type of questions you can answer for me."
+        },
+        {
+          "text": "How do I use you?"
+        },
+        {
+          "text": "Tell me something"
+        },
+        {
+          "text": "What else can you help me with?"
+        },
+        {
+          "text": "What do you handle?"
+        },
+        {
+          "text": "What do you do?"
+        },
+        {
+          "text": "What can I ask you to do?"
+        },
+        {
+          "text": "What are your skills?"
+        },
+        {
+          "text": "What are you used for?"
+        },
+        {
+          "text": "What are you good at?"
+        },
+        {
+          "text": "What are you capable of?"
+        }
+      ],
+      "description": "Request capabilities of the bot."
+    }
+  ],
+  "entities": [
+    {
+      "entity": "language",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Esperanto",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Sango",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Northern Sami",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Sindhi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Sardinian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Sanskrit",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Kinyarwanda",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Russian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Romanian; Moldavian;",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Rundi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Romansh",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Quechua",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Portuguese",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Pushto; Pashto",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Polish",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Pali",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Panjabi; Punjabi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ossetian; Ossetic",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Oriya",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Oromo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ojibwa",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "croatian",
+          "synonyms": [
+            "horwatie",
+            "rvacki"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "german",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Zulu",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Chinese",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Zhuang; Chuang",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yoruba",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yiddish",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Xhosa",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Wolof",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Walloon",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Volap�k",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Vietnamese",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Venda",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Uzbek",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Urdu",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ukrainian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Uighur; Uyghur",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Tahitian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Twi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Tatar",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Tsonga",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Turkish",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Tonga (Tonga Islands)",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Tswana",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Tagalog",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Turkmen",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Tigrinya",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Thai",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Tajik",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Telugu",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Tamil",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Swahili",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Swedish",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Sundanese",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Sotho",
+          "synonyms": [
+            "Southern"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Swati",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Serbian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Albanian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Somali",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Shona",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Samoan",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Slovenian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Slovak",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Sinhala; Sinhalese",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Occitan (post 1500);",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Chichewa; Chewa; Nyanja",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Navajo; Navaho",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Norwegian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Norwegian Nynorsk;",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Dutch; Flemish",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ndonga",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Nepali",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ndebele",
+          "synonyms": [
+            "South;",
+            "North; North Ndebele"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Bokm�l",
+          "synonyms": [
+            "Norwegian;"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Nauru",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Burmese",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Maltese",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Malay",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Marathi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Mongolian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Malayalam",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Macedonian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Maori",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Marshallese",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Malagasy",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Latvian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Luba-Katanga",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Lithuanian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Lao",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Lingala",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Limburgan; Limburger;",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ganda",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Luxembourgish; Letzeburgesch",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Latin",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Kirghiz; Kyrgyz",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Cornish",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Komi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Kurdish",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Kashmiri",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Kanuri",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Korean",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Kannada",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Central Khmer",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Kalaallisut; Greenlandic",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Kazakh",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Kuanyama; Kwanyama",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Kikuyu; Gikuyu",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Kongo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Georgian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Javanese",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Japanese",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Inuktitut",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Italian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Icelandic",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ido",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Inupiaq",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Sichuan Yi; Nuosu",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Igbo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Interlingue; Occidental",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Indonesian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Interlingua",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Herero",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Armenian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Hungarian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Haitian; Haitian Creole",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Hiri Motu",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Hindi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Hebrew",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Hausa",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Manx",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Gujarati",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Guarani",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Galician",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Gaelic; Scottish Gaelic",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Irish",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Western Frisian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "French",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Faroese",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Fijian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Finnish",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Fulah",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Persian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Basque",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Estonian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Spanish; Castilian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Azerbaijani",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Aymara",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Avaric",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Assamese",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Arabic",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Aragonese",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Amharic",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Akan",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Afrikaans",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Avestan",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Abkhazian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Afar",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "English",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Greek",
+          "synonyms": [
+            "Modern (1453-)"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Ewe",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Dzongkha",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Divehi; Dhivehi; Maldivian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Danish",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Welsh",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Chuvash",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Church Slavic; Old Slavonic;",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Czech",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Cree",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Corsican",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Chamorro",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Chechen",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Catalan; Valencian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Bosnian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Breton",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Tibetan",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Bengali",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Bislama",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Bambara",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Bihari languages",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Bulgarian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Belarusian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Bashkir",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-person",
+      "values": []
+    },
+    {
+      "entity": "category",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "category",
+          "synonyms": [
+            "categories",
+            "subcategory",
+            "catagory",
+            "type"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sort",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "sort",
+          "synonyms": [
+            "kind",
+            "sorts"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "general",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "mood",
+          "synonyms": [
+            "moods",
+            "temper",
+            "vibe",
+            "ambience",
+            "ambiance",
+            "atmosphere",
+            "sentiment",
+            "humour",
+            "spirit",
+            "humor"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "feeling",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "date",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "before",
+          "patterns": [
+            "^(.*?(\\bbefore\\b)[^$]*)$"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "after",
+          "patterns": [
+            "^(.*?(\\bafter\\b)[^$]*)$"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "early",
+          "patterns": [
+            "^(.*?(\\bearly\\b)[^$]*)$"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "late",
+          "synonyms": [
+            "^(.*?(\\blate\\b)[^$]*)$"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "between",
+          "patterns": [
+            "^(.*?(\\bbetween\\b)[^$]*)$"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "date",
+          "patterns": [
+            "\"<? @sys-date ?>\""
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-07-10"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "time": 2,
+            "typing": true,
+            "response_type": "pause"
+          }
+        ]
+      },
+      "parent": "node_1_1556969605425",
+      "metadata": {},
+      "conditions": "@language",
+      "dialog_node": "node_4_1556971982881",
+      "previous_sibling": "node_3_1556971910439"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "time": 2,
+            "typing": true,
+            "response_type": "pause"
+          }
+        ]
+      },
+      "parent": "node_1_1556969605425",
+      "metadata": {},
+      "conditions": "@date || @sys-date",
+      "dialog_node": "node_3_1556971910439"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I am bot unlike you. I am here to help you."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "node_1_1557004825380",
+      "metadata": {},
+      "conditions": "#General_Human_or_Bot",
+      "dialog_node": "node_7_1557005052378",
+      "previous_sibling": "node_5_1557005009152"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You can get all additional information on zirafaujagodini@hacklica.hr"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "node_1_1557004825380",
+      "metadata": {},
+      "conditions": "#General_Connect_to_Agent",
+      "dialog_node": "node_4_1557004969693",
+      "previous_sibling": "node_3_1557004931081"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You can do that by stop writing. Bye"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "node_1_1557004825380",
+      "metadata": {},
+      "conditions": "#General_Ending",
+      "dialog_node": "node_5_1557005009152",
+      "previous_sibling": "node_4_1557004969693"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I am search helper. You can search documents by many different parameters."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "node_1_1557004825380",
+      "metadata": {},
+      "conditions": "#General_Agent_Capabilities",
+      "dialog_node": "node_3_1557004931081",
+      "previous_sibling": "node_2_1557004913807"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I am safe because my password is \"giraffe1234\""
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "node_1_1557004825380",
+      "metadata": {},
+      "conditions": "#General_Security_Assurance",
+      "dialog_node": "node_11_1557005281292",
+      "previous_sibling": "node_10_1557005270852"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you!"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "node_1_1557004825380",
+      "metadata": {},
+      "conditions": "#General_Positive_Feedback",
+      "dialog_node": "node_10_1557005270852",
+      "previous_sibling": "node_9_1557005256248"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Yes. Żirafa hvali se zecu dugaćkim vratom: -Kada pijem vodu u vruće dane neopisiv je dożivljaj, kada centimetar po centimetar voda hladi moje grlo. -Kada jedem ukusno liśće sa drveća i gutam je neopisiv je dożivljaj, kada centimetar po centimetar klize kroz moje grlo. Na to će zec: -A jesi li ikad povraćala?"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "node_1_1557004825380",
+      "metadata": {},
+      "conditions": "#General_Jokes",
+      "dialog_node": "node_8_1557005074726",
+      "previous_sibling": "node_7_1557005052378"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "node_1_1557004825380",
+      "metadata": {},
+      "conditions": "#General_Negative_Feedback",
+      "dialog_node": "node_9_1557005256248",
+      "previous_sibling": "node_8_1557005074726"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I am here to help you with your document search"
+              },
+              {
+                "text": "I am happy to help you with your documents"
+              },
+              {
+                "text": "Because I love your documents"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "parent": "node_1_1557004825380",
+      "metadata": {},
+      "conditions": "#General_About_You",
+      "dialog_node": "node_2_1557004913807"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Enter the date"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1556971026876",
+      "disabled": true,
+      "metadata": {},
+      "dialog_node": "node_2_1556971896571"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you, by"
+              },
+              {
+                "text": "By"
+              },
+              {
+                "text": "Great talking to you, by"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1556906039271",
+      "disabled": true,
+      "metadata": {},
+      "dialog_node": "node_4_1556906386863"
+    },
+    {
+      "type": "standard",
+      "title": "Greetings",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi. I'm here for help. Feel free to ask me information about your document archive."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#greetings",
+      "dialog_node": "node_1_1556903542549",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "general",
+      "output": {},
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#General_About_You || #General_Security_Assurance || #General_Positive_Feedback || #General_Negative_Feedback || #General_Jokes || #General_Human_or_Bot || #General_Connect_to_Agent || #General_Agent_Capabilities || #General_Ending || #General_About_You",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1557004825380",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1556969605425"
+    },
+    {
+      "type": "standard",
+      "title": "not_supported_actions",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Unfortunately, I do not know how to do that yet."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#document_info && @sort || @category",
+      "dialog_node": "node_13_1557006650974",
+      "previous_sibling": "node_1_1556903542549"
+    },
+    {
+      "type": "standard",
+      "title": "thankyou",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You're welcome"
+              },
+              {
+                "text": "Anytime."
+              },
+              {
+                "text": "No problem"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#thank_you",
+      "dialog_node": "node_2_1556905727149",
+      "previous_sibling": "node_1_1557004825380"
+    },
+    {
+      "type": "standard",
+      "title": "goodbyes",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you, by"
+              },
+              {
+                "text": "By"
+              },
+              {
+                "text": "Great talking to you, by"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "#goodbyes",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_3_1556906039271",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_2_1556905727149"
+    },
+    {
+      "type": "standard",
+      "title": "search_documents",
+      "output": {},
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1556971026876"
+      },
+      "conditions": "#document_info",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1556969605425",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1556971026876"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_3_1556906039271"
+    },
+    {
+      "type": "standard",
+      "title": "pause",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Done."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1556971026876",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_13_1557006650974"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. My name is Giraffile and I'm a chatbot. I can save your time by searching for specific documents with given document name or date."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "workspace_id": "97e2728c-50fc-43d0-b2a5-d6def17c61b9",
+  "counterexamples": [
+    {
+      "text": "something else"
+    }
+  ],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    }
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}

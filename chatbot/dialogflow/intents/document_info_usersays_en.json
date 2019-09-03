@@ -1,0 +1,222 @@
+[
+  {
+    "id": "9f65116b-7748-4d23-b8a8-5536a610e516",
+    "data": [
+      {
+        "text": " find by date",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "189f50a2-1b1d-44d2-9a3b-5f4736a28e94",
+    "data": [
+      {
+        "text": "search",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "834fbd00-7239-4835-8af7-a7745cf6837e",
+    "data": [
+      {
+        "text": "find",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "a3b000a3-c4b0-41b8-9f16-fe10c41042f2",
+    "data": [
+      {
+        "text": " document title",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "d3552550-67b6-4cdc-ae69-886ba620c936",
+    "data": [
+      {
+        "text": "document name",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "a8a847b2-ac91-4c6d-9845-0b75c983fb1b",
+    "data": [
+      {
+        "text": "document date",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "90415141-6bf1-4c06-8a6b-bd2cb292b523",
+    "data": [
+      {
+        "text": "document",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "496af69c-32c4-4ac9-ba5c-17e8b46ace90",
+    "data": [
+      {
+        "text": "Can you provide me document",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1
+  },
+  {
+    "id": "4b26e52a-df5d-465d-832d-ef32fb5d40b9",
+    "data": [
+      {
+        "text": "Can you give me document",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "2f9fcdb0-4118-470e-b571-2e085a751739",
+    "data": [
+      {
+        "text": " find by name",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "e687e636-2a74-4c44-92e4-07b1d3c499d8",
+    "data": [
+      {
+        "text": "provide me",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "f29bc367-1b57-452d-9dbc-9be073b98242",
+    "data": [
+      {
+        "text": "may I ask you to give me all documents",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "42835945-14d0-46cc-aab8-2afed8603fe7",
+    "data": [
+      {
+        "text": "I\u0027d like to see all of my files that are in german and made after 2018",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "b5bfaa88-3ebe-4881-8e71-93acc7c466b3",
+    "data": [
+      {
+        "text": "give me all documents with name",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "8ebbd0e1-397b-453d-96d3-d7c166147628",
+    "data": [
+      {
+        "text": " find by name, give me",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "ca37d87e-bb11-4c50-97f4-4d1650097497",
+    "data": [
+      {
+        "text": "find me all documents in german",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "ff86773a-9c54-48a1-9afa-c8e8bea5656d",
+    "data": [
+      {
+        "text": "find me all documents in croatian",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "278ff172-ee58-40c1-ba78-22823d99537a",
+    "data": [
+      {
+        "text": "find document by title",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "aba17f3a-43ce-4e86-a8ef-3f36d97b92e5",
+    "data": [
+      {
+        "text": "Find document by name",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "002b3301-8a6b-46bb-95a7-8433ae5480a6",
+    "data": [
+      {
+        "text": "provide  me all documents with name",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  }
+]
